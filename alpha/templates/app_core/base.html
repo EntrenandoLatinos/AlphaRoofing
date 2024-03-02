@@ -1,13 +1,1056 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base de la pagina</title>
-</head>
-<body>
-    
-    {% block content %} {% endblock content %}
+{% load static %}
 
-</body>
+<!DOCTYPE html>
+<html lang="zxx"> 
+	<head>
+		<!-- meta tag -->
+		<meta charset="utf-8">
+		<title>Plumber - Konstruk - Construction & Building HTML Template</title>
+		<meta name="description" content="">
+		<!-- responsive tag -->
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- favicon -->
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'app_core/assets/images/favicon1.webp' %}">
+		<!-- Bootstrap v4.4.1 css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'app_core/assets/css/bootstrap.min.css' %}">
+		<!-- font-awesome css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'app_core/assets/css/font-awesome.min.css' %}">
+		<!-- Uicons Regular Rounded css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'app_core/assets/css/uicons-regular-rounded.css' %}">
+		<!-- flaticon css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'app_core/assets/fonts/flaticon.css' %}">
+		<!-- animate css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'app_core/assets/css/animate.css' %}">
+		<!-- slick css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'app_core/assets/css/slick.css' %}">
+		<!-- owl.carousel css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'app_core/assets/css/owl.carousel.css' %}">
+		<!-- off canvas css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'app_core/assets/css/off-canvas.css' %}">
+		<!-- magnific popup css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'app_core/assets/css/magnific-popup.css' %}">
+		<!-- Main Menu css -->
+		<link rel="stylesheet" href="{% static 'app_core/assets/css/rsmenu-main.css' %}">
+		<!-- spacing css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'app_core/assets/css/rs-spacing.css' %}">
+		<!-- style css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'app_core/style.css' %}"> <!-- This stylesheet dynamically changed from style.less -->
+		<!-- responsive css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'app_core/assets/css/responsive.css' %}">
+
+        {% block extra_styles %}{% endblock extra_styles %}
+		
+	</head>
+	<body class="home-blue-color">
+		
+		<div class="offwrap"></div>
+
+		<!--Preloader start here-->
+	   	<div id="pre-load">
+            <div id="loader" class="loader">
+                <div class="loader-container">
+                    <div class="loader-icon"><img src="{% static 'app_core/assets/images/favicon3.webp' %}" alt="Alpha Roofing"></div>
+                </div>
+            </div>              
+        </div>
+		<!--Preloader area end here-->
+			
+		<!-- Main content Start -->
+		<div class="main-content">
+
+            <!-- start Banner -->
+                {% include 'app_core/snippets/header.html' %}
+            <!-- end Banner -->
+
+			{% block content %}{% endblock content %}
+
+			
+
+			<!-- Services Start -->
+			<div class="rs-services services-style6 gray-bg3 pt-120 pb-120 md-pt-80 md-pb-80">
+				<div class="container">
+					<div class="sec-title text-center mb-35 md-mb-25">
+						<span class="sub-text sub-text5">Latest Services</span>
+						<h2 class="title pb-20">
+							Our professional plumbing<br> 
+							services solutions
+						</h2>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-6 mb-20">
+							<div class="services-item">
+								<div class="services-img">
+									<a href="services-style1.html">
+										<img src="{% static 'app_core/assets/images/services/style6/service-1.jpg' %}" alt="Services">
+									</a>
+								</div>
+								<div class="services-content">
+									<h4 class="title"> <a href="services-style1.html">Bathroom Plumbing</a></h4>
+									<p class="services-txt">  Nor is there anyone who loves pursues bit desires to obtain pain of itself.</p>
+									<div class="services-btn btn-style3">
+										<a class="btn-text" href="services-style1.html">Know More<i class="fi fi-rr-arrow-small-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 mb-20">
+							<div class="services-item">
+								<div class="services-img">
+									<a href="services-style1.html">
+										<img src="{% static 'app_core/assets/images/services/style6/service-2.jpg' %}" alt="Services">
+									</a>
+								</div>
+								<div class="services-content">
+									<h4 class="title"> <a href="services-style1.html">Kitchen Plumbing</a></h4>
+									<p class="services-txt">  Nor is there anyone who loves pursues bit desires to obtain pain of itself.</p>
+									<div class="services-btn btn-style3">
+										<a class="btn-text" href="services-style1.html">Know More<i class="fi fi-rr-arrow-small-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 mb-20">
+							<div class="services-item">
+								<div class="services-img">
+									<a href="services-style1.html">
+										<img src="{% static 'app_core/assets/images/services/style6/service-3.jpg' %}" alt="Services">
+									</a>
+								</div>
+								<div class="services-content">
+									<h4 class="title"> <a href="services-style1.html">Basement Plumbing</a></h4>
+									<p class="services-txt">  Nor is there anyone who loves pursues bit desires to obtain pain of itself.</p>
+									<div class="services-btn btn-style3">
+										<a class="btn-text" href="services-style1.html">Know More<i class="fi fi-rr-arrow-small-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 md-mb-20">
+							<div class="services-item">
+								<div class="services-img">
+									<a href="services-style1.html">
+										<img src="{% static 'app_core/assets/images/services/style6/service-4.jpg' %}" alt="Services">
+									</a>
+								</div>
+								<div class="services-content">
+									<h4 class="title"> <a href="services-style1.html">Drain clogged</a></h4>
+									<p class="services-txt">  Nor is there anyone who loves pursues bit desires to obtain pain of itself.</p>
+									<div class="services-btn btn-style3">
+										<a class="btn-text" href="services-style1.html">Know More<i class="fi fi-rr-arrow-small-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 sm-mb-20">
+							<div class="services-item">
+								<div class="services-img">
+									<a href="services-style1.html">
+										<img src="{% static 'app_core/assets/images/services/style6/service-5.jpg' %}" alt="Services">
+									</a>
+								</div>
+								<div class="services-content">
+									<h4 class="title"> <a href="services-style1.html">Water Line Repair</a></h4>
+									<p class="services-txt">  Nor is there anyone who loves pursues bit desires to obtain pain of itself.</p>
+									<div class="services-btn btn-style3">
+										<a class="btn-text" href="services-style1.html">Know More<i class="fi fi-rr-arrow-small-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="services-item">
+								<div class="services-img">
+									<a href="services-style1.html">
+										<img src="{% static 'app_core/assets/images/services/style6/service-6.jpg' %}" alt="Services">
+									</a>
+								</div>
+								<div class="services-content">
+									<h4 class="title"> <a href="services-style1.html">Sewage Backups</a></h4>
+									<p class="services-txt">  Nor is there anyone who loves pursues bit desires to obtain pain of itself.</p>
+									<div class="services-btn btn-style3">
+										<a class="btn-text" href="services-style1.html">Know More<i class="fi fi-rr-arrow-small-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 mt-55 md-mt-35">
+							<div class="sec-title text-center sm-left">
+								<p class="view-services">Find Your Best Plumbing Services.<a href="#"><span class="btn-text">Find Your Services</span></a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Services End -->
+			
+			<!-- Cta Start -->
+			<div class="rs-cta cta-style1 bg15">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="cta-content md-text-center pt-110 pb-125 md-pt-65 md-pb-65">
+								<div class="title-heading mb-40">
+								 	<span class="sub-text">Emargency Services</span>
+								 	<h2 class="title">Emergency services call us</h2>
+								</div>
+								<div class="address-wrap">
+			                        <div class="address-icon">
+			                            <i class="fa fa-phone"></i>
+			                        </div>
+			                        <div class="content-txt">
+			                        	<a href="#">+0820 318 887</a>
+			                        </div>
+			                    </div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="cta-img">
+								<img src="{% static 'app_core/assets/images/cta/plumber-man.png' %}" alt="Images">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Cta End -->
+
+			<!-- Project Section Start -->
+			<div class="rs-project project-style4 pt-120 pb-120 md-pt-80 md-pb-80">
+			    <div class="container">
+			    	<div class="sec-title text-center mb-35 md-mb-25">
+			    		<span class="sub-text sub-text5">Latest Project</span>
+			    		<h2 class="title">
+			    			Our latest completed projects.
+			    		</h2>
+			    	</div>
+			        <div class="gridFilter mb-50 md-mb-30 text-center">
+			            <button class="active" data-filter="*">All</button>
+			            <button data-filter=".filter1">Bathroom</button>
+			            <button data-filter=".filter2">Gas Line</button>
+			            <button data-filter=".filter3">Kitchen</button>
+			            <button data-filter=".filter4">Water Line</button>
+			        </div>                    
+			        <div class="row grid">
+			            <div class="col-lg-4 col-md-6 mb-30 grid-item filter1 filter2">
+			                <div class="project-item">
+			                    <div class="project-img">
+			                        <img src="{% static 'app_core/assets/images/project/style3/port-1.jpg' %}" alt="images">
+			                    </div>
+			                    <div class="project-content"> 
+			                        <div class="project-inner">
+			                        	<span class="category"><a href="projects-single.html">Kitchen</a></span>
+			                            <h3 class="title"><a href="projects-single.html">Clogged Drains</a></h3>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-30 grid-item filter2 filter1">
+			            	<div class="project-item">
+			            	    <div class="project-img">
+			            	        <img src="{% static 'app_core/assets/images/project/style3/port-2.jpg' %}" alt="images">
+			            	    </div>
+			            	    <div class="project-content"> 
+			            	        <div class="project-inner">
+			            	        		<span class="category"><a href="projects-single.html">Bathroom</a></span>
+			            	            <h3 class="title"><a href="projects-single.html">Leak Detection</a></h3>
+			            	        </div>
+			            	    </div>
+			            	</div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 mb-30 grid-item filter4 filter3">
+			               	<div class="project-item">
+			               	    <div class="project-img">
+			               	        <img src="{% static 'app_core/assets/images/project/style3/port-3.jpg' %}" alt="images">
+			               	    </div>
+			               	    <div class="project-content"> 
+			               	        <div class="project-inner">
+			               	        	<span class="category"><a href="projects-single.html">Water Line</a></span>
+			               	            <h3 class="title"><a href="projects-single.html">Water Heater Installation</a></h3>
+			               	        </div>
+			               	    </div>
+			               	</div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 md-mb-30 grid-item 1 filter3">
+			            	<div class="project-item">
+			            	    <div class="project-img">
+			            	        <img src="{% static 'app_core/assets/images/project/style3/port-5.jpg' %}" alt="images">
+			            	    </div>
+			            	    <div class="project-content"> 
+			            	        <div class="project-inner">
+			            	        		<span class="category"><a href="projects-single.html">Kitchen</a></span>
+			            	            <h3 class="title"><a href="projects-single.html">Plumbing Diagnosis</a></h3>
+			            	        </div>
+			            	    </div>
+			            	</div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 sm-mb-30 grid-item filter2 filter4">
+			                <div class="project-item">
+			                    <div class="project-img">
+			                        <img src="{% static 'app_core/assets/images/project/style3/port-4.jpg' %}" alt="images">
+			                    </div>
+			                    <div class="project-content"> 
+			                        <div class="project-inner">
+			                        	<span class="category"><a href="projects-single.html">Bathroom</a></span>
+			                            <h3 class="title"><a href="projects-single.html">Frozen Pipes</a></h3>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
+			            	<div class="project-item">
+			            	    <div class="project-img">
+			            	        <img src="{% static 'app_core/assets/images/project/style3/port-6.jpg' %}" alt="images">
+			            	    </div>
+			            	    <div class="project-content"> 
+			            	        <div class="project-inner">
+			            	        	<span class="category"><a href="projects-single.html">Gas Line</a></span>
+			            	            <h3 class="title"><a href="projects-single.html">Emergency Plumber</a></h3>
+			            	        </div>
+			            	    </div>
+			            	</div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<!-- Project Section End -->
+
+			<!-- Team Section Start -->
+			<div class="rs-team team-style3 team-modify2 gray-bg3 pt-120 pb-120 md-pt-80 md-pb-80">
+    			<div class="container">
+					<div class="sec-title text-center mb-45">
+						<span class="sub-text sub-text5">Meet our team</span>
+						<h2 class="title">
+							Meet our plumber experts
+						</h2>
+					</div>
+    				<div class="rs-carousel owl-carousel" data-loop="true" data-items="4" data-margin="30" data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800" data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="true" data-ipad-device2="2" data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-md-device="4" data-md-device-nav="false" data-md-device-dots="true">
+    					<div class="team-item-wrap">
+    						<div class="team-inner-wrap">
+    							<div class="image-wrap">
+    								<a href="team-single.html"><img src="{% static 'app_core/assets/images/team/style1/tm1.jpg' %}" alt="Team"></a>
+    							</div>
+    							<div class="team-content">
+                                    <div class="team-info">
+                                        <h3 class="team-name">
+                                            <a href="team-single.html">Xavier Davids</a>
+                                        </h3>
+                                        <span class="team-title">Builder Advisor</span>
+                                    </div>
+                                   	<div class="plus-team">
+                                   		<div class="social-icons">
+	                                      	<a href="#"><i class="fa fa-facebook"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-instagram"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-twitter"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-linkedin"></i></a>                               
+	                                    </div>
+                                   		<i class="fi fi-rr-share share-i"></i>
+                                   	</div>
+                                </div>
+    						</div>
+    					</div>
+    					<div class="team-item-wrap">
+    						<div class="team-inner-wrap">
+    							<div class="image-wrap">
+    								<a href="team-single.html"><img src="{% static 'app_core/assets/images/team/style1/tm2.jpg' %}" alt="Team"></a>
+    							</div>
+    							<div class="team-content">
+                                    <div class="team-info">
+                                        <h3 class="team-name">
+                                            <a href="team-single.html">Davis Youn</a>
+                                        </h3>
+                                        <span class="team-title">Architecture</span>
+                                    </div>
+                                    <div class="plus-team">
+                                   		<div class="social-icons">
+	                                      	<a href="#"><i class="fa fa-facebook"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-instagram"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-twitter"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-linkedin"></i></a>                               
+	                                    </div>
+                                    	<i class="fi fi-rr-share share-i"></i>
+                                    </div>
+                                </div>
+    						</div>
+    					</div>
+    					<div class="team-item-wrap">
+    						<div class="team-inner-wrap">
+    							<div class="image-wrap">
+    								<a href="team-single.html"><img src="{% static 'app_core/assets/images/team/style1/tm3.jpg' %}" alt="Team"></a>
+    							</div>
+    							<div class="team-content">
+                                    <div class="team-info">
+                                        <h3 class="team-name">
+                                            <a href="team-single.html">Thomas Arthur</a>
+                                        </h3>
+                                        <span class="team-title">Foreman</span>
+                                    </div>
+                                    <div class="plus-team">
+                                   		<div class="social-icons">
+	                                      	<a href="#"><i class="fa fa-facebook"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-instagram"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-twitter"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-linkedin"></i></a>                               
+	                                    </div>
+                                    	<i class="fi fi-rr-share share-i"></i>
+                                    </div>
+                                </div>
+    						</div>
+    					</div>
+    					<div class="team-item-wrap">
+    						<div class="team-inner-wrap">
+    							<div class="image-wrap">
+    								<a href="team-single.html"><img src="{% static 'app_core/assets/images/team/style1/tm1.jpg' %}" alt="Team"></a>
+    							</div>
+    							<div class="team-content">
+                                    <div class="team-info">
+                                        <h3 class="team-name">
+                                            <a href="team-single.html">Leo Harnent Keorn</a>
+                                        </h3>
+                                        <span class="team-title">Construction Worker</span>
+                                    </div>
+                                    <div class="plus-team">
+                                   		<div class="social-icons">
+	                                      	<a href="#"><i class="fa fa-facebook"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-instagram"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-twitter"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-linkedin"></i></a>                               
+	                                    </div>
+                                    	<i class="fi fi-rr-share share-i"></i>
+                                    </div>
+                                </div>
+    						</div>
+    					</div>
+    					<div class="team-item-wrap">
+    						<div class="team-inner-wrap">
+    							<div class="image-wrap">
+    								<a href="team-single.html"><img src="{% static 'app_core/assets/images/team/style1/tm2.jpg' %}" alt="Team"></a>
+    							</div>
+    							<div class="team-content">
+                                    <div class="team-info">
+                                        <h3 class="team-name">
+                                            <a href="team-single.html">John William</a>
+                                        </h3>
+                                        <span class="team-title">CEO & Engineer</span>
+                                    </div>
+                                    <div class="plus-team">
+                                   		<div class="social-icons">
+	                                      	<a href="#"><i class="fa fa-facebook"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-instagram"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-twitter"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-linkedin"></i></a>                               
+	                                    </div>
+                                    	<i class="fi fi-rr-share share-i"></i>
+                                    </div>
+                                </div>
+    						</div>
+    					</div>
+    					<div class="team-item-wrap">
+    						<div class="team-inner-wrap">
+    							<div class="image-wrap">
+    								<a href="team-single.html"><img src="{% static 'app_core/assets/images/team/style1/tm3.jpg' %}" alt="Team"></a>
+    							</div>
+    							<div class="team-content">
+                                    <div class="team-info">
+                                        <h3 class="team-name">
+                                            <a href="team-single.html">Navin Thapa</a>
+                                        </h3>
+                                        <span class="team-title">Project Manager</span>
+                                    </div>
+                                    <div class="plus-team">
+                                   		<div class="social-icons">
+	                                      	<a href="#"><i class="fa fa-facebook"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-instagram"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-twitter"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-linkedin"></i></a>                               
+	                                    </div>
+                                    	<i class="fi fi-rr-share share-i"></i>
+                                    </div>
+                                </div>
+    						</div>
+    					</div>
+						<div class="team-item-wrap">
+							<div class="team-inner-wrap">
+								<div class="image-wrap">
+									<a href="team-single.html"><img src="{% static 'app_core/assets/images/team/style1/tm1.jpg' %}" alt="Team"></a>
+								</div>
+								<div class="team-content">
+	                                <div class="team-info">
+	                                    <h3 class="team-name">
+	                                        <a href="team-single.html">Xavier Davids</a>
+	                                    </h3>
+	                                    <span class="team-title">Builder Advisor</span>
+	                                </div>
+	                                <div class="plus-team">
+                                   		<div class="social-icons">
+	                                      	<a href="#"><i class="fa fa-facebook"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-instagram"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-twitter"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-linkedin"></i></a>                               
+	                                    </div>
+	                                	<i class="fi fi-rr-share share-i"></i>
+	                                </div>
+	                            </div>
+							</div>
+						</div>
+						<div class="team-item-wrap">
+							<div class="team-inner-wrap">
+								<div class="image-wrap">
+									<a href="team-single.html"><img src="{% static 'app_core/assets/images/team/tm2.jpg' %}" alt="Team"></a>
+								</div>
+								<div class="team-content">
+	                                <div class="team-info">
+	                                    <h3 class="team-name">
+	                                        <a href="team-single.html">Davis Youn</a>
+	                                    </h3>
+	                                    <span class="team-title">Architecture</span>
+	                                </div>
+	                                <div class="plus-team">
+                                   		<div class="social-icons">
+	                                      	<a href="#"><i class="fa fa-facebook"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-instagram"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-twitter"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-linkedin"></i></a>                               
+	                                    </div>
+	                                	<i class="fi fi-rr-share share-i"></i>
+	                                </div>
+	                            </div>
+							</div>
+						</div>
+						<div class="team-item-wrap">
+							<div class="team-inner-wrap">
+								<div class="image-wrap">
+									<a href="team-single.html"><img src="{% static 'app_core/assets/images/team/tm3.jpg' %}" alt="Team"></a>
+								</div>
+								<div class="team-content">
+	                                <div class="team-info">
+	                                    <h3 class="team-name">
+	                                        <a href="team-single.html">Thomas Arthur</a>
+	                                    </h3>
+	                                    <span class="team-title">Foreman</span>
+	                                </div>
+	                                <div class="plus-team">
+                                   		<div class="social-icons">
+	                                      	<a href="#"><i class="fa fa-facebook"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-instagram"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-twitter"></i></a>                               
+	                                      	<a href="#"><i class="fa fa-linkedin"></i></a>                               
+	                                    </div>
+	                                	<i class="fi fi-rr-share share-i"></i>
+	                                </div>
+	                            </div>
+							</div>
+						</div>
+    				</div>
+    			</div>
+			</div>
+			<!-- Team Section End -->
+
+			<!-- Choose Start -->
+			<div class="rs-choose choose-style4">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="rs-choose-content">
+							<div class="sec-title mb-45">
+								<span class="sub-text sub-text5">Why Choose Us</span>
+								<h2 class="title">
+									The perfect solution for Plumber Services
+								</h2>
+							</div>
+							<div class="rs-addon-services mb-38">
+								<div class="services-icon">
+									<img src="{% static 'app_core/assets/images/choose/style2/icons/1.png' %}" alt="Icons">
+								</div>
+								<div class="services-text">
+									<h4 class="title"> Guaranteed Works</h4>
+									<p class="services-txt">  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur proident.</p>
+								</div>
+							</div>
+							<div class="rs-addon-services mb-38">
+								<div class="services-icon">
+									<img src="{% static 'app_core/assets/images/choose/style2/icons/2.png' %}" alt="Icons">
+								</div>
+								<div class="services-text">
+									<h4 class="title">Fast Services</h4>
+									<p class="services-txt">  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur proident.</p>
+								</div>
+							</div>
+							<div class="rs-addon-services">
+								<div class="services-icon">
+									<img src="{% static 'app_core/assets/images/choose/style2/icons/3.png' %}" alt="Icons">
+								</div>
+								<div class="services-text">
+									<h4 class="title">24/7 Emergency Support</h4>
+									<p class="services-txt">  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur proident.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 video-item">
+						<div class="rs-videos blue-videos">
+							<div class="animate-border">
+                                <a class="popup-border popup-videos" href="https://www.youtube.com/watch?v=FMvA5fyZ338">
+                                    <i class="fa fa-play"></i>
+                                </a>
+                            </div>    
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Choose End -->
+
+			<!-- Process Section Start -->
+			<div class="rs-process process-style1 bg16 pt-120 pb-115 md-pt-80 md-pb-75">
+				<div class="container">
+					<div class="sec-title text-center mb-45">
+						<span class="sub-text sub-text5 white-color">How We Work</span>
+						<h2 class="title white-color">
+							Our works process for you
+						</h2>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-6 md-mb-30">
+							<div class="services-item">
+								<div class="services-icon">
+									<img src="{% static 'app_core/assets/images/process/style1/1.png' %}" alt="Images">
+								</div>
+								<div class="content-text">
+                                    <h4 class="title">Online Booking</h4>
+                                    <p class="services-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum.</p>
+                                </div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 sm-mb-30">
+							<div class="services-item">
+								<div class="services-icon blue-icon-bg">
+									<img src="{% static 'app_core/assets/images/process/style1/2.png' %}" alt="Images">
+								</div>
+								<div class="content-text">
+                                    <h4 class="title">We Arrive Fast</h4>
+                                    <p class="services-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum.</p>
+                                </div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<div class="services-item">
+								<div class="services-icon">
+									<img src="{% static 'app_core/assets/images/process/style1/3.png' %}" alt="Images">
+								</div>
+								<div class="content-text">
+                                    <h4 class="title">Solveing Problem</h4>
+                                    <p class="services-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum.</p>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="rs-arrow-animate">
+					<div class="arrow-style one">
+						<img src="{% static 'app_core/assets/images/process/style1/arrow-icon.png' %}" alt="Images">
+					</div>
+					<div class="arrow-style two">
+						<img src="{% static 'app_core/assets/images/process/style1/arrow-icon.png' %}" alt="Images">
+					</div>
+				</div>
+			</div>
+			<!-- Process Section End -->
+
+			<!-- Testimonial Section Start -->
+			<div id="rs-testimonial" class="rs-testimonial testimonial-style2 testimonial-modify2 gray-bg3 pt-120 pb-120 md-pt-80 md-pb-80 sm-pb-40">
+	        	<div class="container">
+                    <div class="sec-title text-center mb-45">
+                    	<span class="sub-text sub-text5">Testimonials</span>
+                    	<h2 class="title">
+                    		Our clients reviews.
+                    	</h2>
+                    </div>
+    				<div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800" data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="true" data-ipad-device2="2" data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-md-device="3" data-md-device-nav="false" data-md-device-dots="true">
+    					<div class="testi-item">
+    					   <div class="item-content">
+    					   		<span><img src="{% static 'app_core/assets/images/testimonial/style1/quote4.png' %}" alt="Testimonial"></span>
+    					   		<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway.</p>
+    					   </div>
+    					   <div class="testi-content">
+    					   		<div class="image-wrap">
+    					   			<img src="{% static 'app_core/assets/images/testimonial/style1/testi1.jpg' %}" alt="Testimonial">
+    					   		</div>
+    					   		<div class="testi-information">
+    					   			<div class="testi-name">David M. Martin</div>
+    					   			<span class="testi-title">CEO, Pro Theme</span>
+    					   		</div>
+    					   </div>
+    					</div>
+    					<div class="testi-item">
+    					   <div class="item-content">
+    					   		<span><img src="{% static 'app_core/assets/images/testimonial/style1/quote4.png' %}" alt="Testimonial"></span>
+    					   		<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway.</p>
+    					   </div>
+    					   <div class="testi-content">
+    					   		<div class="image-wrap">
+    					   			<img src="{% static 'app_core/assets/images/testimonial/style1/testi2.jpg' %}" alt="Testimonial">
+    					   		</div>
+    					   		<div class="testi-information">
+    					   			<div class="testi-name">Jessica Alba</div>
+    					   			<span class="testi-title">Manager</span>
+    					   		</div>
+    					   </div>
+    					</div>
+    					<div class="testi-item">
+    					   <div class="item-content">
+    					   		<span><img src="{% static 'app_core/assets/images/testimonial/style1/quote4.png' %}" alt="Testimonial"></span>
+    					   		<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway.</p>
+    					   </div>
+    					   <div class="testi-content">
+    					   		<div class="image-wrap">
+    					   			<img src="{% static 'app_core/assets/images/testimonial/style1/testi3.jpg' %}" alt="Testimonial">
+    					   		</div>
+    					   		<div class="testi-information">
+    					   			<div class="testi-name">Abdur Rashid</div>
+    					   			<span class="testi-title">CEO, Brick Consulting</span>
+    					   		</div>
+    					   </div>
+    					</div>
+    					<div class="testi-item">
+    					   <div class="item-content">
+    					   		<span><img src="{% static 'app_core/assets/images/testimonial/style1/quote4.png' %}" alt="Testimonial"></span>
+    					   		<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway.</p>
+    					   </div>
+    					   <div class="testi-content">
+    					   		<div class="image-wrap">
+    					   			<img src="{% static 'app_core/assets/images/testimonial/style1/testi4.jpg' %}" alt="Testimonial">
+    					   		</div>
+    					   		<div class="testi-information">
+    					   			<div class="testi-name">Maria Masud</div>
+    					   			<span class="testi-title">Apps Developer</span>
+    					   		</div>
+    					   </div>
+    					</div>
+    				</div>
+	        	</div>
+	        </div>
+	        <!-- Testimonial Section End -->
+
+			<!-- Blog Section Start -->
+			<div id="rs-blog" class="rs-blog blog-main-home blog-modify5 pt-120 pb-120 md-pt-80 md-pb-80">
+			    <div class="container">  
+			        <div class="sec-title text-center mb-45">
+			        	<span class="sub-text sub-text5">News & Blog</span>
+			        	<h2 class="title">
+			        		Our latest news post<br>
+			        		and articles
+			        	</h2>
+			        </div>
+			        <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800" data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="false" data-md-device-dots="false">
+			            <div class="blog-item">
+			                <div class="image-wrap">
+			                    <a href="blog-single.html"><img src="{% static 'app_core/assets/images/blog/style1/1.jpg' %}" alt=""></a>
+			                </div>
+			                <div class="blog-content">
+			                	<ul class="blog-meta">
+			                		<li class="date"><i class="fa fa-calendar-check-o"></i>26 April 2022</li>
+	                           		<li class="admin"><i class="fa fa-user-o"></i>Admin</li>
+	                           	</ul>
+			                    <h3 class="blog-title"><a href="blog-single.html">We really appreciate content about the construction</a></h3>
+			                    <div class="blog-button blog-btn5"><a href="blog-single.html">Read More</a></div>
+			                </div>
+			            </div>
+			            <div class="blog-item">
+			                <div class="image-wrap">
+			                    <a href="blog-single.html"><img src="{% static 'app_core/assets/images/blog/style1/2.jpg' %}" alt=""></a>
+			                </div>
+			                <div class="blog-content">
+			                	<ul class="blog-meta">
+			                		<li class="date"><i class="fa fa-calendar-check-o"></i>26 April 2022</li>
+	                           		<li class="admin"><i class="fa fa-user-o"></i>Admin</li>
+	                           	</ul>
+			                    <h3 class="blog-title"><a href="blog-single.html">Best practices construction law on construction</a></h3>
+			                    <div class="blog-button blog-btn5"><a href="blog-single.html">Read More</a></div>
+			                </div>
+			            </div>
+			            <div class="blog-item">
+			                <div class="image-wrap">
+			                    <a href="blog-single.html"><img src="{% static 'app_core/assets/images/blog/style1/3.jpg' %}" alt=""></a>
+			                </div>
+			                <div class="blog-content">
+			                	<ul class="blog-meta">
+			                		<li class="date"><i class="fa fa-calendar-check-o"></i>26 April 2022</li>
+	                           		<li class="admin"><i class="fa fa-user-o"></i>Admin</li>
+	                           	</ul>
+			                    <h3 class="blog-title"><a href="blog-single.html">Although many people may overlook the need</a></h3>
+			                    <div class="blog-button blog-btn5"><a href="blog-single.html">Read More</a></div>
+			                </div>
+			            </div>
+			            <div class="blog-item">
+			                <div class="image-wrap">
+			                    <a href="blog-single.html"><img src="{% static 'app_core/assets/images/blog/style1/4.jpg' %}" alt=""></a>
+			                </div>
+			                <div class="blog-content">
+			                	<ul class="blog-meta">
+			                		<li class="date"><i class="fa fa-calendar-check-o"></i>26 April 2022</li>
+	                           		<li class="admin"><i class="fa fa-user-o"></i>Admin</li>
+	                           	</ul>
+			                    <h3 class="blog-title"><a href="blog-single.html">Construction executive holds a very special place</a></h3>
+			                    <div class="blog-button blog-btn5"><a href="blog-single.html">Read More</a></div>
+			                </div>
+			            </div>
+			            <div class="blog-item">
+			                <div class="image-wrap">
+			                    <a href="blog-single.html"><img src="{% static 'app_core/assets/images/blog/style1/5.jpg' %}" alt=""></a>
+			                </div>
+			                <div class="blog-content">
+			                	<ul class="blog-meta">
+			                		<li class="date"><i class="fa fa-calendar-check-o"></i>26 April 2022</li>
+	                           		<li class="admin"><i class="fa fa-user-o"></i>Admin</li>
+	                           	</ul>
+			                    <h3 class="blog-title"><a href="blog-single.html">This is another massive sites with a ton of information</a></h3>
+			                    <div class="blog-button blog-btn5"><a href="blog-single.html">Read More</a></div>
+			                </div>
+			            </div>
+			            <div class="blog-item">
+			                <div class="image-wrap">
+			                    <a href="blog-single.html"><img src="{% static 'app_core/assets/images/blog/style1/6.jpg' %}" alt=""></a>
+			                </div>
+			                <div class="blog-content">
+			                	<ul class="blog-meta">
+			                		<li class="date"><i class="fa fa-calendar-check-o"></i>26 April 2022</li>
+	                           		<li class="admin"><i class="fa fa-user-o"></i>Admin</li>
+	                           	</ul>
+			                    <h3 class="blog-title"><a href="blog-single.html">The construction business the owner site is jam-packed</a></h3>
+			                    <div class="blog-button blog-btn5"><a href="blog-single.html">Read More</a></div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<!-- Blog Section End -->
+
+			<!-- Partner Start -->
+			<div class="rs-partner partner-main-home partner-modify5">
+				<div class="partner-background-overlay"></div>				
+			    <div class="container">               
+			        <div class="partner-content-widget">
+			        	<div class="rs-carousel owl-carousel" 
+			        	    data-loop="true" 
+			        	    data-items="5" 
+			        	    data-margin="30" 
+			        	    data-autoplay="true" 
+			        	    data-hoverpause="true" 
+			        	    data-autoplay-timeout="5000" 
+			        	    data-smart-speed="800" 
+			        	    data-dots="false" 
+			        	    data-nav="false" 
+			        	    data-nav-speed="false" 
+
+			        	    data-md-device="5" 
+			        	    data-md-device-nav="false" 
+			        	    data-md-device-dots="false" 
+			        	    data-center-mode="false"
+
+			        	    data-ipad-device2="4" 
+			        	    data-ipad-device-nav2="false" 
+			        	    data-ipad-device-dots2="false"
+
+			        	    data-ipad-device="4" 
+			        	    data-ipad-device-nav="false" 
+			        	    data-ipad-device-dots="false" 
+
+			        	    data-mobile-device="2" 
+			        	    data-mobile-device-nav="false" 
+			        	    data-mobile-device-dots="false">  
+			        	    <div class="logo-img">
+			        	        <a href="https://devsdesign.net">
+			        	            <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/1.png' %}" title="" alt="">
+			        	            <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/1.png' %}" title="" alt="">
+			        	        </a>
+			        	    </div>
+			        	    <div class="logo-img">
+			        	        <a href="https://devsdesign.net">
+			        	            <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/2.png' %}" title="" alt="">
+			        	            <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/2.png' %}" title="" alt="">
+			        	        </a>
+			        	    </div>
+			        	    <div class="logo-img">
+			        	        <a href="https://devsdesign.net">
+			        	            <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/3.png' %}" title="" alt="">
+			        	            <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/3.png' %}" title="" alt="">
+			        	        </a>
+			        	    </div>
+			        	    <div class="logo-img">
+			        	        <a href="https://devsdesign.net">
+			        	            <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/4.png' %}" title="" alt="">
+			        	            <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/4.png' %}" title="" alt="">
+			        	        </a>
+			        	    </div>
+			        	    <div class="logo-img">
+			        	        <a href="https://devsdesign.net">
+			        	            <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/5.png' %}" title="" alt="">
+			        	            <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/5.png' %}" title="" alt="">
+			        	        </a>
+			        	    </div>
+			        	    <div class="logo-img">
+			        	        <a href="https://devsdesign.net">
+			        	            <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/6.png' %}" title="" alt="">
+			        	            <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/6.png' %}" title="" alt="">
+			        	        </a>
+			        	    </div>
+			        	    <div class="logo-img">
+			        	        <a href="https://devsdesign.net">
+			        	            <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/7.png' %}" title="" alt="">
+			        	            <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/7.png' %}" title="" alt="">
+			        	        </a>
+			        	    </div>
+			        	</div>
+			        </div>
+			    </div>
+			</div>
+			<!-- Partner End -->
+
+		</div> 
+		<!-- Main content End -->
+	 
+		<!-- Footer Start -->
+		<footer id="rs-footer" class="rs-footer footer-main-home footer-style3">
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 pr-20 md-pr-15 md-mb-20">
+							<div class="footer-logo mb-51 md-mb-30">
+								<a href="index.html"><img src="{% static 'app_core/assets/images/blue-white.png' %}" alt=""></a>
+							</div>
+							<div class="textwidget">
+								<p class="pb-20">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor in cididunt ut labore.</p>
+								<p class="pb-25"><strong>Opening Hours</strong> : Monday – Sat: 9am to 6pm</p>
+							</div>
+							<ul class="footer-social md-mb-30">  
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>                     
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>                     
+                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>                     
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>                     
+                          	</ul>
+						</div>
+						<div class="col-lg-3 md-mb-10">
+							<h3 class="footer-title">Contact Info</h3>
+							<ul class="address-widget">
+                                <li>
+                                    <i class="fi fi-rr-map-marker-home"></i>
+                                    <div class="desc">
+                                    	Ta-134/A, Gulshan Badda Link<br>
+                                    	Rd, Dhaka
+									</div>
+                                </li>
+                                <li>
+                                    <i class="fi fi-rr-phone-call"></i>
+                                    <div class="desc">
+                                       <a href="tel:(+880)15569569365">(+880)155 69569 365</a><br>
+                                       <a href="tel:(+880)15569569366">(+880)155 69569 366</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fi fi-rr-envelope-plus"></i>
+                                    <div class="desc">
+                                        <a href="mailto:support@devsdesign.com">support@devsdesign.com</a><br>
+                                        <a href="mailto:infoname@gmail.com">infoname@gmail.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+						</div>
+						<div class="col-lg-3 md-mb-10">
+							<h3 class="footer-title">Our Services</h3>
+							<ul class="site-map">
+                                <li><a href="general-construction.html">General Construction</a></li>
+                                <li><a href="property-maintenance.html">Property Maintenance</a></li>
+                                <li><a href="project-managment.html">Project Managment</a></li>
+                                <li><a href="virtual-design-build.html">Virtual Design & Build</a></li>
+                                <li><a href="preconstruction.html">Preconstruction</a></li>
+                                <li><a href="design-build.html">Design Build</a></li>
+                            </ul>
+						</div>
+						<div class="col-lg-3">
+							<h3 class="footer-title">Newsletter</h3>
+							<p class="widget-desc">Tetur adipiscing elit, sed do eiusmod tempor in cididunt ut labore.</p>
+							<p>
+                                <input type="email" name="email" placeholder="Your Email Address" required="">
+                                <input type="submit" value="Subscribe Now">
+                            </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+                <div class="container">                    
+                    <div class="row y-middle">
+                        <div class="col-lg-6 md-mb-10 text-lg-end text-center order-last">
+                            <ul class="copy-right-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="#">Pages</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="copyright text-lg-start text-center">
+                                <p>© 2022 Konstruk.  Designed By <a href="https://devsdesign.net" target="blank">Devsdesign</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</footer>
+		<!-- Footer End -->
+
+		<!-- start scrollUp  -->
+		<div id="scrollUp" class="blue-color">
+			<i class="fa fa-angle-up"></i>
+		</div>
+		<!-- End scrollUp  -->
+
+		<!-- Search Modal Start -->
+		<div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
+		    <div class="modal-dialog modal-dialog-centered">
+		        <div class="modal-content">
+		            <div class="search-block clearfix">
+		                <form>
+		                    <div class="form-group">
+		                        <input class="form-control" placeholder="Search Here..." type="text">
+		                    </div>
+		                </form>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- Search Modal End -->
+
+		<!-- modernizr js -->
+		<script src="{% static 'app_core/assets/js/modernizr-2.8.3.min.js' %}"></script>
+		<!-- jquery latest version -->
+		<script src="{% static 'app_core/assets/js/jquery.min.js' %}"></script>
+		<!-- Bootstrap v4.4.1 js -->
+		<script src="{% static 'app_core/assets/js/bootstrap.min.js' %}"></script>
+		<!-- op nav js -->
+		<script src="{% static 'app_core/assets/js/jquery.nav.js' %}"></script>
+		<!-- owl.carousel js -->
+		<script src="{% static 'app_core/assets/js/owl.carousel.min.js' %}"></script>
+		<!-- isotope.pkgd.min js -->
+		<script src="{% static 'app_core/assets/js/isotope.pkgd.min.js' %}"></script>
+		<!-- wow js -->
+		<script src="{% static 'app_core/assets/js/wow.min.js' %}"></script>
+		<!-- Skill bar js -->
+		<script src="{% static 'app_core/assets/js/skill.bars.jquery.js' %}"></script>
+		<!-- imagesloaded js -->
+		<script src="{% static 'app_core/assets/js/imagesloaded.pkgd.min.js' %}"></script>
+		<!-- Slick js -->
+		<script src="{% static 'app_core/assets/js/slick.min.js' %}"></script>
+		<!-- waypoints.min js -->
+		<script src="{% static 'app_core/assets/js/waypoints.min.js' %}"></script>
+		<!-- magnific popup js -->
+		<script src="{% static 'app_core/assets/js/jquery.magnific-popup.min.js' %}"></script>
+		<!-- counterup.min js -->
+		<script src="{% static 'app_core/assets/js/jquery.counterup.min.js' %}"></script>
+		<!-- contact form js -->
+		<script src="{% static 'app_core/assets/js/contact.form.js' %}"></script>
+		<!-- main js -->
+		<script src="{% static 'app_core/assets/js/main.js' %}"></script>
+	</body>
 </html>
