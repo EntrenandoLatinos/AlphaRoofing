@@ -1,57 +1,80 @@
-{% extends "account/base.html" %}
+{% extends "app_core/base.html" %}
 {% load static %}
 {% load i18n %}
 {% load account socialaccount %}
 
 {% block head_title %}{{ block.super }}{% trans "Sign In" %}{% endblock %}
 
-
 {% block content %}
-<form class="row" method="POST" action="{% url 'account_login' %}">
-	{% csrf_token %}
-	<div class="col-12 p-0 align-self-center">
-		<div class="row">
-			<div class="col-12 p-0 pb-3">
-				<h2>Log In</h2>
-				<p class="white_color_custom">
-					Back to 
-					<a href="{% url 'app_core:index' %}" class="primary-color">
-						Home <i class="icon-home"></i>
-					</a>
-				</p>
-			</div>
+
+<!-- Breadcrumbs Start -->
+<div class="rs-breadcrumbs img1">
+	<div class="container">
+		<div class="breadcrumbs-inner">
+			<h1 class="page-title">
+				My Account
+			</h1>
+			<span class="sub-text">Excepteur sint occaecat cupidatat non proident, sunt in coulpa qui official<br>
+				modeserunt mollit anim id est 20 years experience.</span>
+			<ul class="breadcrumbs-area">
+				<li title="Go to konstruk">
+					<a class="active" href="{% url 'app_core:index' %}">Home</a>
+				</li>
+				<li>My Account</li>
+			</ul>
 		</div>
+	</div>
+</div>
+<!-- Breadcrumbs End -->
+
+<!-- My Account Section Start -->
+<div class="rs-my-account pt-120 pb-120 md-pt-80 md-pb-80">
+	<div class="container">
 		<div class="row">
-			<div class="col-12 p-0 input-group">
-				<input type="text" class="form-control" placeholder="Username or Email" id="loginEmail" name="login" required>
-			</div>
-			<div class="col-12 p-0 input-group">
-				<input type="password" class="form-control" placeholder="Password" id="loginPass" name="password" required>
-			</div>
-			{% if form.errors %}
-				{% for field in form %}
-					{% for error in field.errors %}
+			<div class="col-lg-6 md-mb-50">
+				<h2 class="title pb-30 md-pb-15">Login</h2>
+				<div class="rs-login">
+					<form method="POST" action="{% url 'account_login' %}">
+						{% csrf_token %}
+						<div class="form-group mb-30">
+							<label>Username or email address<span>*</span></label>
+							<input id="fname" name="login" class="form-control-mod" type="text" required="">
+							<label>Password <span>*</span></label>
+							<input id="tname" name="password" class="form-control-mod" type="password" required="">
+						</div>
+						{% if form.errors %}
+						{% for field in form %}
+						{% for error in field.errors %}
 						<div class="alert alert-danger">
 							<strong>{{ error|escape }}</strong>
 						</div>
-					{% endfor %}
-				{% endfor %}
-				{% for error in form.non_field_errors %}
-					<div class="alert alert-danger">
-						<strong>{{ error|escape }}</strong>
-					</div>
-				{% endfor %}
-			{% endif %}
-	
-			{% if redirect_field_value %}
-				<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-			{% endif %}
-		</div>
-		<div class="row">
-			<div class="col-12 p-0 input-group align-self-center">
-				<button class="btn primary-button"><i class="icon-login"></i>LOGIN</button>
+						{% endfor %}
+						{% endfor %}
+						{% for error in form.non_field_errors %}
+						<div class="alert alert-danger">
+							<strong>{{ error|escape }}</strong>
+						</div>
+						{% endfor %}
+						{% endif %}
+						<button class="add-btn" type="submit">Log In</button>
+						<label>
+							<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme"
+								type="checkbox" id="rememberme" value="forever">
+							<span>Remember me</span>
+						</label>
+						<div class="last-password pt-30">
+							<a href="#">Lost your password?</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-6" style="text-align: center;">
+				<!-- <h2 class="title pb-30 md-pb-15">Register</h2> -->
+				<img src="{% static 'app_core/assets/images/contact/login.webp' %}" alt="Images" style="width: 80%;">
 			</div>
 		</div>
 	</div>
-</form>
+</div>
+<!-- My Account Section Start -->
+
 {% endblock content %}

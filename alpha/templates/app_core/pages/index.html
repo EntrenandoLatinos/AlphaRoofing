@@ -6,7 +6,6 @@
 
 {% block extra_styles %}
 <style>
-    
     .rs-banner.banner-style2 .banner-background {
         background: url("{% static 'app_core/assets/images/banner/banner1.webp' %}");
         position: relative;
@@ -41,29 +40,25 @@
     {% include 'app_core/snippets/banner3.html' %}
 <!-- end Banner -->
 
-<!-- start Insurance -->
-    {% include 'app_core/snippets/insurance.html' %}
-<!-- end Insurance -->
-
 <!-- start About -->
     {% include 'app_core/snippets/about.html' %}
 <!-- end About -->
 
-<!-- start Social Media -->
-    {% include 'app_core/snippets/social_media.html' %}
-<!-- end Social Media -->
+<!-- start Counters -->
+    {% include 'app_core/snippets/counters.html' %}
+<!-- end Counters -->
 
 <!-- start Services -->
     {% include 'app_core/snippets/services.html' %}
 <!-- end Services -->
 
-<!-- start Portafolio -->
-    {% include 'app_core/snippets/portafolio.html' %}
-<!-- end Portafolio -->
+<!-- start Social Media -->
+    {% include 'app_core/snippets/social_media.html' %}
+<!-- end Social Media -->
 
-<!-- start Counters -->
-    {% include 'app_core/snippets/counters.html' %}
-<!-- end Counters -->
+<!-- start Gallery -->
+    {% include 'app_core/snippets/gallery.html' %}
+<!-- end Gallery -->
 
 {% if about.image_google %}
     <!-- start Google Business -->
@@ -71,14 +66,47 @@
     <!-- end Google Business -->
 {% endif %}
 
+<!-- start Testimonios -->
+    {% include 'app_core/snippets/testimonials.html' %}
+<!-- end Testimonios -->
+
 <!-- start Partners -->
     {% include 'app_core/snippets/partners.html' %}
 <!-- end Partners -->
 
-<!-- start Subscribe -->
-    {% include 'app_core/snippets/subscribe.html' %}
-<!-- end Subscribe -->
-
 {% endblock content %}
 
-{% block extra_javascript %}{% endblock extra_javascript %}
+{% block extra_javascript %}
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // Función para animar los contadores
+        function animateCounters() {
+            const counters = document.querySelectorAll('.rs-count');
+            const options = {
+                threshold: 0.5 // Cuando el 50% de la sección de contadores está en el viewport
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        counters.forEach(counter => {
+                            const targetCount = parseInt(counter.innerText, 10);
+                            let count = 0;
+                            const animation = setInterval(() => {
+                                counter.textContent = `${count++}`;
+                                if (count > targetCount) {
+                                    clearInterval(animation);
+                                }
+                            }, 30); // Ajusta el intervalo para una animación más fluida
+                        });
+                        observer.unobserve(entry.target); // Detiene la observación una vez que se activa la animación
+                    }
+                });
+            }, options);
+            document.querySelectorAll('.count-number').forEach(counter => {
+                observer.observe(counter);
+            });
+        }
+        animateCounters(); // Llama a la función para iniciar la animación de los contadores
+    });
+</script>
+{% endblock extra_javascript %}

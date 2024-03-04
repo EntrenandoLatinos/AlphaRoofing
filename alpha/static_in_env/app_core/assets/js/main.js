@@ -642,10 +642,10 @@
     }
 		
     // Counter Up
-    var counter = $('.rs-count');
-    if(counter.length) {  
-        $(".rs-count").counterUp({time:3000});
-    }
+    // var counter = $('.rs-count');
+    // if(counter.length) {  
+    //     $(".rs-count").counterUp({time:3000});
+    // }
     
     // scrollTop init	
     var totop = $('#scrollUp');    
