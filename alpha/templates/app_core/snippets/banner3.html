@@ -6,17 +6,23 @@
         <div class="container">
             <div class="content-wrap">
                 <h1 class="title wow fadeInDown">
-                    We Are Best Builders<br>
-                    In The World
+                    {{banner.title}} <br> {{banner.title2}}
                 </h1>
                 <div class="description wow">
                     <p>
-                        We are one of the leading end-to-end engineering services and solutions company<br>
-                        offering business value across the product lifecycle.
+                    {% if banner.subtitle %}
+                        {{banner.subtitle}}
+                    {% endif %}
                     </p>  
                 </div>
-                <div class="banner-btn mt-40 wow fadeInUp">
-                    <a class="readon blue-btn orange-more1" href="contact.html">Discover More<i class="fa fi fi-rr-arrow-right"></i></a>
+                <div class="banner-btn mt-40 wow fadeInUp" style="padding: 90px 0;">
+                    <!-- <a class="readon blue-btn orange-more1" href="contact.html">Discover More<i class="fa fi fi-rr-arrow-right"></i></a> -->
+                    <a class="readon" id="whatsapp_banner_web" style="background-color: #25d366; color: white;" data-aos="zoom-out-up" data-aos-delay="1200" class="ml-auto mr-auto mt-5 btn" target="_blank" href="https://web.whatsapp.com/send?l=es&phone=1{{contact.phone1}}&text=https://dvineroofingllc.com/ " rel="noopener noreferrer">
+                        <i class="whatsapp-icon"></i> Whatsapp 
+                    </a>
+                    <a class="readon" id="whatsapp_banner_movil" style="background-color: #25d366; color: white;" data-aos="zoom-out-up" data-aos-delay="1200" class="ml-auto mr-auto mt-5 btn" target="_blank" href="https://api.whatsapp.com/send?l=es&phone=1{{contact.phone1}}&text=https://dvineroofingllc.com/ " rel="noopener noreferrer">
+                        <i class="whatsapp-icon"></i> Whatsapp
+                    </a>
                 </div>
             </div>
         </div>
@@ -25,21 +31,20 @@
 <!-- Banner End -->
 
 <!-- Services Start -->
-<div class="rs-services services-style2 md-pb-0">
+<div class="rs-services services-style2 mb-md-0">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-lg-4">
                 <div class="services-box">
                     <div class="services-icon">
-                        <a href="general-construction.html">
+                        <a href="javascript:;">
                             <img class="dance_hover" src="{% static 'app_core/assets/images/services/style2/1.png' %}" alt="Images">
                         </a>
                     </div>
                     <div class="services-content">
-                        <h3 class="title"><a href="general-construction.html">Sustainable System</a></h3>
+                        <h3 class="title"><a href="javascript:;">{{skills.title1}}</a></h3>
                         <p class="services-txt">  
-                            Leverage agile frameworks to provide a robust synopsis for high 
-                            level overviews iterative approaches to corporate.
+                            {{skills.description1}}
                         </p>
                     </div>
                 </div>
@@ -47,15 +52,14 @@
             <div class="col-lg-4">
                 <div class="services-box services-yellow-box">
                     <div class="services-icon">
-                        <a href="project-managment.html">
-                            <img class="dance_hover" src="{% static 'app_core/assets/images/services/style2/2.png' %}" alt="Images">
+                        <a href="javascript:;">
+                            <img class="dance_hover" src="{% static 'app_core/assets/images/services/style2/4.png' %}" alt="Images">
                         </a>
                     </div>
                     <div class="services-content">
-                        <h3 class="title"><a href="project-managment.html">Quality Services</a></h3>
-                        <p class="services-txt">  
-                            Leverage agile frameworks to provide a robust synopsis for high 
-                            level overviews iterative approaches to corporate.
+                        <h3 class="title"><a href="javascript:;" class="white-color">{{skills.title2}}</a></h3>
+                        <p class="services-txt white-color">  
+                            {{skills.description2}}
                         </p>
                     </div>
                 </div>
@@ -63,15 +67,14 @@
             <div class="col-lg-4">
                 <div class="services-box">
                     <div class="services-icon">
-                        <a href="preconstruction">
+                        <a href="javascript:;">
                             <img class="dance_hover" src="{% static 'app_core/assets/images/services/style2/3.png' %}" alt="Images">
                         </a>
                     </div>
                     <div class="services-content">
-                        <h3 class="title"><a href="preconstruction">Remodeling Experts</a></h3>
+                        <h3 class="title"><a href="javascript:;">{{skills.title3}}</a></h3>
                         <p class="services-txt">  
-                            Leverage agile frameworks to provide a robust synopsis for high 
-                            level overviews iterative approaches to corporate.
+                            {{skills.description3}}
                         </p>
                     </div>
                 </div>

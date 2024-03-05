@@ -135,12 +135,10 @@ def works(request):
     servicios = Service.objects.all()
     gallery = WorkImage.objects.all().order_by('?')
     social_media = SocialMedia.objects.all()
-    works = WorkImage.objects.all().order_by('?')[:1]
     context = {
         'contact': contact,
         'servicios': servicios,
-        'gallery': gallery,
-        'works': works,
+        'works': gallery,
         'social_media': social_media
     }
     if request.method == 'POST':

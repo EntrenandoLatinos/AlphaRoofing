@@ -10,102 +10,39 @@
             </h2>
         </div>
         <div class="row">
-            
+        {% for service in servicios %}
             <div class="col-xl-4 col-md-6 mb-30">
                 <div class="services-item">
                     <div class="services-wrap">
-                        <div class="services-image">
-                            <img src="{% static 'app_core/assets/images/services/main-home/main-img/servic-1.jpg' %}" alt="Services">
+                        <div class="services-image custom_service">
+                            <img src="{{service.image.url}}" alt="Services">
                         </div>
                         <div class="services-content">
                             <div class="service-inner">
                                 <div class="icon-top">
-                                    <img src="{% static 'app_core/assets/images/services/main-home/main-icons/service-icon1.png' %}" alt="Services">
+                                    <img src="{{service.icon.url}}" alt="Services">
                                 </div>
                                 <div class="services-titles">
-                                    <h3 class="title"><a href="general-construction.html">Roofing</a></h3>
+                                    <h3 class="title"><a href="{% url 'app_core:services_view' service.id %}">{{service.title}}</a></h3>
                                 </div>
-                                <p class="services-txt">Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus.</p>
+                                
                                 <div class="services-btn">
-                                    <a class="btn-text" href="general-construction.html">Read More</a>
+                                    <a class="btn-text" href="{% url 'app_core:services_view' service.id %}">Read More</a>
                                 </div>
                             </div>
                         </div>
                         <div class="normarl-text-area">
                             <div class="services-titles">
-                                <h3 class="title"><a href="general-construction.html">Roofing</a></h3>
+                                <h3 class="title"><a href="{% url 'app_core:services_view' service.id %}">{{service.title}}</a></h3>
                             </div>
                             <div class="icon-image">
-                                <img src="{% static 'app_core/assets/images/services/main-home/main-icons/service-icon1.png' %}" alt="Services">
+                                <img src="{{service.icon.url}}" alt="Services">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-xl-4 col-md-6 mb-30">
-                <div class="services-item">
-                    <div class="services-wrap">
-                        <div class="services-image">
-                            <img src="{% static 'app_core/assets/images/services/main-home/main-img/servic-2.jpg' %}" alt="Services">
-                        </div>
-                        <div class="services-content">
-                            <div class="service-inner">
-                                <div class="icon-top">
-                                    <img src="{% static 'app_core/assets/images/services/main-home/main-icons/service-icon2.png' %}" alt="Services">
-                                </div>
-                                <div class="services-titles">
-                                    <h3 class="title"><a href="property-maintenance.html">Siding</a></h3>
-                                </div>
-                                <p class="services-txt">Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus.</p>
-                                <div class="services-btn">
-                                    <a class="btn-text" href="property-maintenance.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="normarl-text-area">
-                            <div class="services-titles">
-                                <h3 class="title"><a href="property-maintenance.html">Siding</a></h3>
-                            </div>
-                            <div class="icon-image">
-                                <img src="{% static 'app_core/assets/images/services/main-home/main-icons/service-icon2.png' %}" alt="Services">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-md-6 mb-30">
-                <div class="services-item">
-                    <div class="services-wrap">
-                        <div class="services-image">
-                            <img src="{% static 'app_core/assets/images/services/main-home/main-img/servic-3.jpg' %}" alt="Services">
-                        </div>
-                        <div class="services-content">
-                            <div class="service-inner">
-                                <div class="icon-top">
-                                    <img src="{% static 'app_core/assets/images/services/main-home/main-icons/service-icon3.png' %}" alt="Services">
-                                </div>
-                                <div class="services-titles">
-                                    <h3 class="title"><a href="project-managment.html">Gutter</a></h3>
-                                </div>
-                                <p class="services-txt">Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus.</p>
-                                <div class="services-btn">
-                                    <a class="btn-text" href="project-managment.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="normarl-text-area">
-                            <div class="services-titles">
-                                <h3 class="title"><a href="project-managment.html">Gutter</a></h3>
-                            </div>
-                            <div class="icon-image">
-                                <img src="{% static 'app_core/assets/images/services/main-home/main-icons/service-icon3.png' %}" alt="Services">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        {% endfor %}
             
         </div>
     </div>

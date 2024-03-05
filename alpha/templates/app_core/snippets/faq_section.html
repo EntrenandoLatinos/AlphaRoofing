@@ -4,83 +4,43 @@
 <div class="rs-faq faq-style1 faq-modify2 pt-80 pb-100 md-pt-80 md-pb-60">
     <div class="container">
         <div class="sec-title text-center mb-45">
-            <span class="sub-text sub-text5">Portafolio</span>
+            <span class="sub-text sub-text5">FAQ's</span>
             <h2 class="title">
-                Our Works
+                Answers to Your Common Questions
             </h2>
         </div>
         <div class="row">
             <div class="col-lg-12 md-mb-50">
                 <div class="faq-content">
                     <div id="accordion" class="accordion">
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="card-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                    aria-expanded="true">We are a global family that values diversity.</a>
-                            </div>
-                            <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
-                                <div class="card-body">
-                                    Nor is there anyone who loves or pursues or desires to obtain pain of itself,
-                                    because it is pain, but occasionally cumstances occur in which toil and pain can
-                                    procuresteady steady.
+                        {% for faq in faqs %}
+                            {% if forloop.counter == 1 %}
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="true">{{faq.title}}</a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                                        <div class="card-body">
+                                            {{faq.description|safe}}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="card-link collapsed" href="#" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false">We own and shape our future.</a>
-                            </div>
-                            <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
-                                <div class="card-body">
-                                    Nor is there anyone who loves or pursues or desires to obtain pain of itself,
-                                    because it is pain, but occasionally cumstances occur in which toil and pain can
-                                    procuresteady steady.
+                            {% else %}
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" href="#" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false">{{faq.title}}</a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+                                            {{faq.description|safe}}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="card-link collapsed" href="#" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false">We create sustainable
-                                    growth.</a>
-                            </div>
-                            <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
-                                <div class="card-body">
-                                    Nor is there anyone who loves or pursues or desires to obtain pain of itself,
-                                    because it is pain, but occasionally cumstances occur in which toil and pain can
-                                    procuresteady steady.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="card-link collapsed" href="#" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false">We own and shape our
-                                    future.</a>
-                            </div>
-                            <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
-                                <div class="card-body">
-                                    Nor is there anyone who loves or pursues or desires to obtain pain of itself,
-                                    because it is pain, but occasionally cumstances occur in which toil and pain can
-                                    procuresteady steady.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="card-link collapsed" href="#" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false">We create sustainable
-                                    growth.</a>
-                            </div>
-                            <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
-                                <div class="card-body">
-                                    Nor is there anyone who loves or pursues or desires to obtain pain of itself,
-                                    because it is pain, but occasionally cumstances occur in which toil and pain can
-                                    procuresteady steady.
-                                </div>
-                            </div>
-                        </div>
+                            {% endif %}
+                        {% endfor %}
+                        
                     </div>
                 </div>
             </div>

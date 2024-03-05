@@ -1,49 +1,37 @@
 {% load static %}
 
 <!-- Blog Section Start -->
-<div class="rs-inner-blog pt-120 md-pt-80 md-pb-80">
+<div class="rs-inner-blog pt-120 md-pt-80" id="servicios">
     <div class="container">
+        <div class="sec-title text-center mb-45">
+            <span class="sub-text sub-text5">Explore Our Expertise</span>
+            <h2 class="title">
+                Our Services
+            </h2>
+        </div>
         <div class="row">
-
             <div class="col-lg-12 md-mb-50">
                 <div class="row">
-                    
+                    {% for service in servicios %}
                     <div class="col-lg-12 mb-50">
                         <div class="blog-item">
-                            <div class="blog-img">
-                                <a href="blog-single.html"><img src="{% static 'app_core/assets/images/blog/style1/1.jpg' %}" alt=""></a>
+                            <div class="blog-img custom_service">
+                                <a href="{% url 'app_core:services_view' service.id %}">
+                                    <img src="{{service.image.url}}" alt="">
+                                </a>
                             </div>
                             <div class="blog-content">
-                                <h3 class="blog-title"><a href="blog-single.html">We really appreciate content about the construction</a></h3>
-                                <div class="blog-meta">
-                                    <ul class="btm-cate">
-                                        <li>
-                                            <div class="author">
-                                                <i class="fi fi-rr-user"></i> Devsdesign                                                        
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="blog-date">
-                                                <i class="fi fi-rr-calendar"></i> May 26, 2022 
-                                            </div>
-                                        </li> 
-                                        <li>
-                                            <div class="tag-line">
-                                                <i class="fi fi-rr-book"></i>
-                                                <a href="#">Educational</a>
-                                            </div>
-                                        </li> 
-                                    </ul>
-                                </div>
-                                <div class="blog-desc">   
-                                    The brand has responded by partnering with skincare experts on social and web content, providing ingredient deep-dives and re-sharing followers’ tips and tricks on social media. The trand has responded by partnering with skincare experts on social and web content, providing ingredient deep-dives and...         
+                                <h3 class="blog-title"><a href="{% url 'app_core:services_view' service.id %}">{{service.title}}</a></h3>
+                                <div class="blog-desc">
+                                    {{ service.description|truncatechars:450|safe }}
                                 </div>
                                 <div class="blog-button inner-btn">
-                                    <a class="blog-btn" href="blog-single.html">Continue Reading</a>
+                                    <a class="blog-btn" href="{% url 'app_core:services_view' service.id %}">Continue Reading</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
 
                 </div>
             </div>

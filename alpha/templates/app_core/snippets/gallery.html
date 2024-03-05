@@ -10,48 +10,15 @@
             </h2>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-30">
-                <div class="gallery-item">
-                    <div class="gallery-icon">
-                        <a class="image-popup" href="{% static 'app_core/assets/images/project/style1/3.jpg' %}"><img src="{% static 'app_core/assets/images/project/style1/3.jpg' %}" alt=""></a>
+            {% for gallery in works %}
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="gallery-item">
+                        <div class="gallery-icon">
+                            <a class="image-popup" href="{{gallery.image.url}}"><img src="{{gallery.image.url}}" alt=""></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-30">
-                <div class="gallery-item">
-                    <div class="gallery-icon">
-                        <a class="image-popup" href="{% static 'app_core/assets/images/project/style1/4.jpg' %}"><img src="{% static 'app_core/assets/images/project/style1/4.jpg' %}" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-30">
-                <div class="gallery-item">
-                    <div class="gallery-icon">
-                        <a class="image-popup" href="{% static 'app_core/assets/images/project/style1/5.jpg' %}"><img src="{% static 'app_core/assets/images/project/style1/5.jpg' %}" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 md-mb-30">
-                <div class="gallery-item">
-                    <div class="gallery-icon">
-                        <a class="image-popup" href="{% static 'app_core/assets/images/project/style1/6.jpg' %}"><img src="{% static 'app_core/assets/images/project/style1/6.jpg' %}" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 sm-mb-30">
-                <div class="gallery-item">
-                    <div class="gallery-icon">
-                        <a class="image-popup" href="{% static 'app_core/assets/images/project/style1/7.jpg' %}"><img src="{% static 'app_core/assets/images/project/style1/7.jpg' %}" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="gallery-item">
-                    <div class="gallery-icon">
-                        <a class="image-popup" href="{% static 'app_core/assets/images/project/style1/8.jpg' %}"><img src="{% static 'app_core/assets/images/project/style1/8.jpg' %}" alt=""></a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>

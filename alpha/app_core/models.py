@@ -55,6 +55,7 @@ class Contact(AuditoriaFecha):
 class Banner(AuditoriaFecha):
     image = models.ImageField(upload_to='banner/', null=True, blank=True)
     title = models.CharField("Banner title", max_length=300, null=True, blank=True, default="")
+    title2 = models.CharField("Banner title2", max_length=300, null=True, blank=True, default="")
     subtitle = models.CharField("Banner subtitle", max_length=300, null=True, blank=True, default="")
     description = models.TextField("Description", max_length=300, null=True, blank=True)
     insurance = models.CharField("Insurance", max_length=300, null=True, blank=True, default="")
@@ -102,10 +103,16 @@ class Skill(AuditoriaFecha):
 class Counter(AuditoriaFecha):
     title1 = models.CharField("Title 1", max_length=300, null=True, blank=True)
     number1 = models.IntegerField("Number 1", null=True, blank=True)
+    symbol1 = models.CharField("Symbol 1", max_length=300, null=True, blank=True)
     title2 = models.CharField("Title 2", max_length=300, null=True, blank=True)
     number2 = models.IntegerField("Number 2", null=True, blank=True)
+    symbol2 = models.CharField("Symbol 2", max_length=300, null=True, blank=True)
     title3 = models.CharField("Title 3", max_length=300, null=True, blank=True)
     number3 = models.IntegerField("Number 3", null=True, blank=True)
+    symbol3 = models.CharField("Symbol 3", max_length=300, null=True, blank=True)
+    title4 = models.CharField("Title 4", max_length=300, null=True, blank=True)
+    number4 = models.IntegerField("Number 4", null=True, blank=True)
+    symbol4 = models.CharField("Symbol 4", max_length=300, null=True, blank=True)
 
     def __str__(self):
         return "{0}".format(str(self.title1))
@@ -117,6 +124,7 @@ class Counter(AuditoriaFecha):
 
 class Service(AuditoriaFecha):
     image = models.ImageField(upload_to='service/', null=True, blank=True)
+    icon = models.ImageField(upload_to='Icon/', null=True, blank=True)
     title = models.CharField("Service Name", max_length=300, null=True, blank=True)
     description = RichTextField("Description", null=True, blank=True)
     description_finish = models.TextField("Finish Description", null=True, blank=True)

@@ -27,22 +27,23 @@
                         <li>
                             <i class="fi fi-rr-map-marker-home"></i>
                             <div class="desc">
-                                Ta-134/A, Gulshan Badda Link<br>
-                                Rd, Dhaka
+                                {{contact.location}}
                             </div>
                         </li>
                         <li>
                             <i class="fi fi-rr-phone-call"></i>
                             <div class="desc">
-                                <a href="tel:(+880)15569569365">(+880)155 69569 365</a><br>
-                                <a href="tel:(+880)15569569366">(+880)155 69569 366</a>
+                                <a href="tel:{{contact.phone1}}">
+                                    {{contact.phone1}}
+                                </a>
                             </div>
                         </li>
                         <li>
                             <i class="fi fi-rr-envelope-plus"></i>
                             <div class="desc">
-                                <a href="mailto:support@devsdesign.com">support@devsdesign.com</a><br>
-                                <a href="mailto:infoname@gmail.com">infoname@gmail.com</a>
+                                <a href="mailto:{{contact.email}}">
+                                    {{contact.email}}
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -50,17 +51,14 @@
                 <div class="col-lg-3 md-mb-10">
                     <h3 class="footer-title">Our Services</h3>
                     <ul class="site-map">
-                        <li><a href="general-construction.html">General Construction</a></li>
-                        <li><a href="property-maintenance.html">Property Maintenance</a></li>
-                        <li><a href="project-managment.html">Project Managment</a></li>
-                        <li><a href="virtual-design-build.html">Virtual Design & Build</a></li>
-                        <li><a href="preconstruction.html">Preconstruction</a></li>
-                        <li><a href="design-build.html">Design Build</a></li>
+                        <li><a href="javascript:;">Roofing</a></li>
+                        <li><a href="javascript:;">Siding</a></li>
+                        <li><a href="javascript:;">Gutter</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
                     <h3 class="footer-title">Newsletter</h3>
-                    <p class="widget-desc">Tetur adipiscing elit, sed do eiusmod tempor in cididunt ut labore.</p>
+                    <!-- <p class="widget-desc">Tetur adipiscing elit, sed do eiusmod tempor in cididunt ut labore.</p> -->
                     <p>
                         <input type="email" name="email" placeholder="Your Email Address" required="">
                         <input type="submit" value="Subscribe Now">
@@ -74,12 +72,12 @@
             <div class="row y-middle">
                 <div class="col-lg-6 md-mb-10 text-lg-end text-center order-last">
                     <ul class="copy-right-menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="{% url 'app_core:index' %}">Home</a></li>
+                        <li><a href="{% url 'app_core:about' %}">About</a></li>
+                        <li><a href="#servicios">Services</a></li>
+                        <li><a href="{% url 'app_core:works' %}">Works</a></li>
+                        <li><a href="{% url 'app_core:faq' %}">FAQ's</a></li>
+                        <li><a href="{% url 'app_core:contact' %}">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-6">

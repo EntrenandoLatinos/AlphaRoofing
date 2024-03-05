@@ -17,84 +17,21 @@
             <button data-filter=".filter4">Water Line</button>
         </div>                    
         <div class="row grid">
-            <div class="col-lg-4 col-md-6 mb-30 grid-item filter1 filter2">
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="{% static 'app_core/assets/images/project/style3/port-1.jpg' %}" alt="images">
-                    </div>
-                    <div class="project-content"> 
-                        <div class="project-inner">
-                            <span class="category"><a href="projects-single.html">Kitchen</a></span>
-                            <h3 class="title"><a href="projects-single.html">Clogged Drains</a></h3>
+            {% for gallery in works %}
+                <div class="col-lg-4 col-md-6 mb-30 grid-item filter1 filter2">
+                    <div class="project-item">
+                        <div class="project-img">
+                            <img src="{{gallery.image.url}}" alt="images">
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-30 grid-item filter2 filter1">
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="{% static 'app_core/assets/images/project/style3/port-2.jpg' %}" alt="images">
-                    </div>
-                    <div class="project-content"> 
-                        <div class="project-inner">
-                                <span class="category"><a href="projects-single.html">Bathroom</a></span>
-                            <h3 class="title"><a href="projects-single.html">Leak Detection</a></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-30 grid-item filter4 filter3">
-                   <div class="project-item">
-                       <div class="project-img">
-                           <img src="{% static 'app_core/assets/images/project/style3/port-3.jpg' %}" alt="images">
-                       </div>
-                       <div class="project-content"> 
-                           <div class="project-inner">
-                               <span class="category"><a href="projects-single.html">Water Line</a></span>
-                               <h3 class="title"><a href="projects-single.html">Water Heater Installation</a></h3>
-                           </div>
-                       </div>
-                   </div>
-            </div>
-            <div class="col-lg-4 col-md-6 md-mb-30 grid-item 1 filter3">
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="{% static 'app_core/assets/images/project/style3/port-5.jpg' %}" alt="images">
-                    </div>
-                    <div class="project-content"> 
-                        <div class="project-inner">
+                        <div class="project-content"> 
+                            <div class="project-inner">
                                 <span class="category"><a href="projects-single.html">Kitchen</a></span>
-                            <h3 class="title"><a href="projects-single.html">Plumbing Diagnosis</a></h3>
+                                <h3 class="title"><a href="projects-single.html">Clogged Drains</a></h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 sm-mb-30 grid-item filter2 filter4">
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="{% static 'app_core/assets/images/project/style3/port-4.jpg' %}" alt="images">
-                    </div>
-                    <div class="project-content"> 
-                        <div class="project-inner">
-                            <span class="category"><a href="projects-single.html">Bathroom</a></span>
-                            <h3 class="title"><a href="projects-single.html">Frozen Pipes</a></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 grid-item filter4 filter1">
-                <div class="project-item">
-                    <div class="project-img">
-                        <img src="{% static 'app_core/assets/images/project/style3/port-6.jpg' %}" alt="images">
-                    </div>
-                    <div class="project-content"> 
-                        <div class="project-inner">
-                            <span class="category"><a href="projects-single.html">Gas Line</a></span>
-                            <h3 class="title"><a href="projects-single.html">Emergency Plumber</a></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>

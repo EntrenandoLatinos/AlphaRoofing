@@ -16,43 +16,42 @@
                 <div class="sec-title mb-45 md-mb-25">
                     <span class="sub-text sub-text5">About Us</span>
                     <h2 class="title pb-20">
-                        Best roofing services that you can trust
+                        Reliable and high-quality roofing services
                     </h2>
-                    <p class="desc">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy data foster to collaborative thinking to empowerment.</p>
+                    <p class="desc">
+                        {{about.about|safe}}
+                    </p>
                 </div>
-                <!-- Counter Section Start -->
-                <div id="rs-counter" class="rs-counter counter-style3 pb-50 md-pb-35">
+                <!-- Services Start -->
+                <div class="rs-services services-style19 pt-30 pb-40">
                     <div class="row">
-                        <div class="col-lg-5 col-sm-5 xs-mb-30">
-                            <div class="rs-counter-list">
-                                <div class="counter-right-border"></div>       
-                                <div class="count-text">
-                                    <div class="count-number">
-                                        <span class="rs-count">60</span>
-                                        <span class="prefix">+</span>			    	
-                                    </div>
-                                    <span class="title">Happy Customers</span>	
+                        <div class="col-lg-6 md-mb-30">
+                            <div class="services-item">
+                                <div class="services-icon">
+                                    <img src="{% static 'app_core/assets/images/about/style5/ser1.png' %}" alt="Images">
+                                </div>
+                                <div class="services-text">
+                                    <h4 class="title">Hard Work</h4>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-7 col-sm-6">
-                            <div class="rs-counter-list widget-padding">       
-                                <div class="count-text">
-                                    <div class="count-number">
-                                        <span class="rs-count">75</span>
-                                        <span class="prefix">k</span>			    	
-                                    </div>
-                                    <span class="title">Completed Cases</span>	
+                        <div class="col-lg-6">
+                            <div class="services-item">
+                                <div class="services-icon">
+                                    <img src="{% static 'app_core/assets/images/about/style5/ser2.png' %}" alt="Images">
+                                </div>
+                                <div class="services-text">
+                                    <h4 class="title">Integrity</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Counter Section End -->
+                <!-- Services End -->
                 <div class="row y-middle">
                     <div class="col-lg-5 col-sm-5 xs-mb-30">
                         <div class="btn-part">
-                            <a class="readon blue-btn know-more" href="about.html">Know More</a>
+                            <a class="readon blue-btn know-more" href="{% url 'app_core:about' %}">Know More</a>
                         </div>
                     </div>
                     <div class="col-lg-7 col-sm-6 pl-30 md-pl-15">
@@ -61,8 +60,8 @@
                                 <i class="fa fa fa-phone"></i>
                             </div>
                             <div class="services-text">
-                                <h4 class="title"> Emergency Services</h4>
-                                <p class="services-txt">  (+088) 589-8745</p>
+                                <h4 class="title"> Contact Us!</h4>
+                                <p class="services-txt">  {{contact.phone1}}</p>
                             </div>
                         </div>
                     </div>

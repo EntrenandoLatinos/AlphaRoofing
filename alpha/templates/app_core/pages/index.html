@@ -7,7 +7,7 @@
 {% block extra_styles %}
 <style>
     .rs-banner.banner-style2 .banner-background {
-        background: url("{% static 'app_core/assets/images/banner/banner1.webp' %}");
+        background: url("{{banner.image.url}}");
         position: relative;
         z-index: 0;
         overflow: hidden;
@@ -31,6 +31,27 @@
         color: #fff; /* Ajusta el color del texto según sea necesario */
         /* Otros estilos para el texto */
     }
+    .custom_service {
+        max-width: 100%; /* Ajusta el ancho máximo del contenedor al ancho del dispositivo */
+        height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+        overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde del contenedor */
+        max-width: 1200px; /* Ancho máximo del contenedor */
+    }
+
+    .custom_service img {
+        width: 100%; /* Ajusta el ancho de la imagen al ancho del contenedor */
+        height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+        max-width: 1200px; /* Ancho máximo de la imagen */
+        max-height: 670px; /* Altura máxima de la imagen */
+        object-fit: cover; /* Mantiene la relación de aspecto original y cubre el contenedor */
+    }
+
+    @media (max-width: 991px) {
+        .rs-services.services-style2 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
 </style>
 {% endblock extra_styles %}
 
@@ -52,9 +73,9 @@
     {% include 'app_core/snippets/services.html' %}
 <!-- end Services -->
 
-<!-- start Social Media -->
-    {% include 'app_core/snippets/social_media.html' %}
-<!-- end Social Media -->
+<!-- start Partners -->
+    {% include 'app_core/snippets/partners.html' %}
+<!-- end Partners -->
 
 <!-- start Gallery -->
     {% include 'app_core/snippets/gallery.html' %}
@@ -70,9 +91,9 @@
     {% include 'app_core/snippets/testimonials.html' %}
 <!-- end Testimonios -->
 
-<!-- start Partners -->
-    {% include 'app_core/snippets/partners.html' %}
-<!-- end Partners -->
+<!-- start Social Media -->
+    {% include 'app_core/snippets/social_media.html' %}
+<!-- end Social Media -->
 
 {% endblock content %}
 
@@ -96,7 +117,7 @@
                                 if (count > targetCount) {
                                     clearInterval(animation);
                                 }
-                            }, 30); // Ajusta el intervalo para una animación más fluida
+                            }, 45); // Ajusta el intervalo para una animación más fluida
                         });
                         observer.unobserve(entry.target); // Detiene la observación una vez que se activa la animación
                     }

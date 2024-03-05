@@ -650,7 +650,7 @@
     // scrollTop init	
     var totop = $('#scrollUp');    
     win.on('scroll', function() {
-        if (win.scrollTop() > 150) {
+        if (win.scrollTop() > 700) {
             totop.fadeIn();
         } else {
             totop.fadeOut();

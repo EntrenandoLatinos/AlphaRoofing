@@ -33,48 +33,25 @@
                 data-mobile-device="2" 
                 data-mobile-device-nav="false" 
                 data-mobile-device-dots="false">  
-                <div class="logo-img">
-                    <a href="https://devsdesign.net">
-                        <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/1.png' %}" title="" alt="">
-                        <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/1.png' %}" title="" alt="">
-                    </a>
-                </div>
-                <div class="logo-img">
-                    <a href="https://devsdesign.net">
-                        <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/2.png' %}" title="" alt="">
-                        <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/2.png' %}" title="" alt="">
-                    </a>
-                </div>
-                <div class="logo-img">
-                    <a href="https://devsdesign.net">
-                        <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/3.png' %}" title="" alt="">
-                        <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/3.png' %}" title="" alt="">
-                    </a>
-                </div>
-                <div class="logo-img">
-                    <a href="https://devsdesign.net">
-                        <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/4.png' %}" title="" alt="">
-                        <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/4.png' %}" title="" alt="">
-                    </a>
-                </div>
-                <div class="logo-img">
-                    <a href="https://devsdesign.net">
-                        <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/5.png' %}" title="" alt="">
-                        <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/5.png' %}" title="" alt="">
-                    </a>
-                </div>
-                <div class="logo-img">
-                    <a href="https://devsdesign.net">
-                        <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/6.png' %}" title="" alt="">
-                        <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/6.png' %}" title="" alt="">
-                    </a>
-                </div>
-                <div class="logo-img">
-                    <a href="https://devsdesign.net">
-                        <img class="hovers-logos rs-grid-img" src="{% static 'app_core/assets/images/partner/style2/7.png' %}" title="" alt="">
-                        <img class="mains-logos rs-grid-img " src="{% static 'app_core/assets/images/partner/style2/7.png' %}" title="" alt="">
-                    </a>
-                </div>
+                
+                {% for partner in partners %}
+                    {% if partner.url %}
+                        <div class="logo-img">
+                            <a href="{{partner.url}}">
+                                <img src="{{partner.image.url}}" title="" alt="">
+                            </a>
+                        </div>
+                    {% else %}
+                        <div class="logo-img">
+                            <a href="javascript:;">
+                                <img src="{{partner.image.url}}" title="" alt="">
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                    
+                
+                
             </div>
         </div>
     </div>
