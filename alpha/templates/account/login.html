@@ -1,4 +1,4 @@
-{% extends "app_core/base.html" %}
+{% extends "account/base.html" %}
 {% load static %}
 {% load i18n %}
 {% load account socialaccount %}
@@ -6,26 +6,6 @@
 {% block head_title %}{{ block.super }}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-
-<!-- Breadcrumbs Start -->
-<div class="rs-breadcrumbs img1">
-	<div class="container">
-		<div class="breadcrumbs-inner">
-			<h1 class="page-title">
-				My Account
-			</h1>
-			<span class="sub-text">Excepteur sint occaecat cupidatat non proident, sunt in coulpa qui official<br>
-				modeserunt mollit anim id est 20 years experience.</span>
-			<ul class="breadcrumbs-area">
-				<li title="Go to konstruk">
-					<a class="active" href="{% url 'app_core:index' %}">Home</a>
-				</li>
-				<li>My Account</li>
-			</ul>
-		</div>
-	</div>
-</div>
-<!-- Breadcrumbs End -->
 
 <!-- My Account Section Start -->
 <div class="rs-my-account pt-120 pb-120 md-pt-80 md-pb-80">
@@ -57,13 +37,15 @@
 						{% endfor %}
 						{% endif %}
 						<button class="add-btn" type="submit">Log In</button>
-						<label>
+						<!-- <label>
 							<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme"
 								type="checkbox" id="rememberme" value="forever">
 							<span>Remember me</span>
-						</label>
+						</label> -->
 						<div class="last-password pt-30">
-							<a href="#">Lost your password?</a>
+							<a href="{% url 'app_core:index' %}">
+								Back to home <i class="fa fa-home"></i>
+							</a>
 						</div>
 					</form>
 				</div>

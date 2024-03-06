@@ -11,14 +11,16 @@
                         <u>Rate Us Now</u>
                     </span>
                     <h2 class="title white-color">
-                        Love our service? Share your thoughts on Google! Leave a review now!
+                        Do you like our services? <br>Rate us!
                     </h2>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="btn-part text-right md-text-center">
                     <!-- <a class="readon more requset-services" href="contact.html">Request A Services</a> -->
-                    <img src="{% static 'app_core/assets/images/gb.png' %}" alt="Images" style="width: 70%;">
+                    <a href="{{about.url_google}}" target="_blank">
+                        <img src="{{about.image_google.url}}" alt="Images" style="width: 70%;">
+                    </a>
                 </div>
             </div>
         </div>

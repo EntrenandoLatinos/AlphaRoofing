@@ -6,7 +6,7 @@
         <div class="sec-title text-center mb-45">
             <span class="sub-text sub-text5">FAQ's</span>
             <h2 class="title">
-                Answers to Your Common Questions
+                We Answer Your Questions
             </h2>
         </div>
         <div class="row">
@@ -30,9 +30,9 @@
                                 <div class="card">
                                     <div class="card-header">
                                         <a class="card-link collapsed" href="#" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false">{{faq.title}}</a>
+                                            data-bs-target="#collapse{{forloop.counter}}" aria-expanded="false">{{faq.title}}</a>
                                     </div>
-                                    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                                    <div id="collapse{{forloop.counter}}" class="collapse" data-bs-parent="#accordion">
                                         <div class="card-body">
                                             {{faq.description|safe}}
                                         </div>
