@@ -99,35 +99,27 @@
 
 {% block extra_javascript %}
 <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        // Función para animar los contadores
-        function animateCounters() {
-            const counters = document.querySelectorAll('.rs-count');
-            const options = {
-                threshold: 0.5 // Cuando el 50% de la sección de contadores está en el viewport
-            };
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        counters.forEach(counter => {
-                            const targetCount = parseInt(counter.innerText, 10);
-                            let count = 0;
-                            const animation = setInterval(() => {
-                                counter.textContent = `${count++}`;
-                                if (count > targetCount) {
-                                    clearInterval(animation);
-                                }
-                            }, 45); // Ajusta el intervalo para una animación más fluida
-                        });
-                        observer.unobserve(entry.target); // Detiene la observación una vez que se activa la animación
-                    }
-                });
-            }, options);
-            document.querySelectorAll('.count-number').forEach(counter => {
-                observer.observe(counter);
-            });
-        }
-        animateCounters(); // Llama a la función para iniciar la animación de los contadores
-    });
+    /* Counter Script */
+    if( $( ".rs-count" ).length ){
+        var counterUp = $( ".rs-count" );
+        counterUp.appear(function() {
+            var $this = $(this),
+            countTo = $this.attr( "data-count" );
+            $this.animate({left: '250px'});
+            $({ countNum: $this.text()}).animate({
+                    countNum: countTo
+                },
+                {
+                duration: 3000,
+                easing: 'linear',
+                step: function() {
+                    $this.text( Math.floor( this.countNum ) );
+                },
+                complete: function() {
+                    $this.text( this.countNum );
+                }
+            });  
+        });
+    }
 </script>
 {% endblock extra_javascript %}
