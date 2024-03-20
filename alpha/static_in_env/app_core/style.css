@@ -2945,7 +2945,7 @@ blockquote p {
 }
 .full-width-header .rs-header .middle-header .logo-part a img {
   transition: 0.4s;
-  max-height: 36px;
+  max-height: 54px;
 }
 .full-width-header .rs-header .middle-header .rs-contact-info {
   display: flex;
@@ -13872,7 +13872,7 @@ body .search-modal .close:hover {
 }
 .loader .loader-icon img {
   animation: loaderpulse alternate 900ms infinite;
-  width: 40px;
+  width: 54px;
 }
 .woocommerce .quantity input[type="number"]::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
