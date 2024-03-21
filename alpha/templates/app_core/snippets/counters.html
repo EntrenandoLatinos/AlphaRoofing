@@ -1,0 +1,88 @@
+{% load static %}
+
+<!-- Counter Section Start -->
+<div id="rs-counter" class="rs-counter counter-style4 pt-120 pb-120 md-pt-80 md-pb-80">
+    <video class="rs-html5-video" autoplay="" muted="" playsinline="" loop="" src="{% static 'app_core/assets/images/video/counter-bg.mp4' %}"></video>
+    <div class="background-video-wrap">
+        <div class="background-overlay"></div>
+    </div>
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-lg-6 md-mb-50 ">
+                <div class="sec-title">
+                    <span class="sub-text sub-text8 white-color">
+                        <img src="{% static 'app_core/assets/images/shape-5.png' %}" alt="Images">
+                        Claim Experts
+                    </span>
+                    <h2 class="title pb-20 white-color">
+                        Effective handling of insurance claims
+                    </h2>
+                    <p class="desc desc7">
+                        Alpha Roofing helps you improve your home
+                    </p>
+                    <div class="btn-part mt-47 md-mt-30">
+                        <div class="address-wrap">
+                            <div class="address-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="content-txt">
+                                <a href="tel:" id="contactPhone"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row counter_custom">
+                    <div class="col-lg-6 col-sm-6 mb-80 md-mb-50">
+                        <div class="rs-counter-list">
+                            <div class="counter-right-border"></div>       
+                            <div class="count-text">
+                                <div class="count-number">
+                                    <span class="rs-count" data-count="{{indicators.number1}}">0</span>
+                                    <span class="prefix">{{indicators.symbol1}}</span>			    	
+                                </div>
+                                <span class="title">{{indicators.title1}}</span>	
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 mb-80 md-mb-50">
+                        <div class="rs-counter-list"> 
+                            <div class="count-text">
+                                <div class="count-number">
+                                    <span class="rs-count" data-count="{{indicators.number2}}">0</span>
+                                    <span class="prefix">{{indicators.symbol2}}</span>			    	
+                                </div>
+                                <span class="title">{{indicators.title2}}</span>	
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 xs-mb-50">
+                        <div class="rs-counter-list">
+                            <div class="counter-left-border"></div>       
+                            <div class="count-text">
+                                <div class="count-number">
+                                    <span class="rs-count" data-count="{{indicators.number3}}">0</span>
+                                    <span class="prefix">{{indicators.symbol3}}</span>			    	
+                                </div>
+                                <span class="title">{{indicators.title3}}</span>	
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="rs-counter-list">       
+                            <div class="count-text">
+                                <div class="count-number">
+                                    <span class="rs-count" data-count="{{indicators.number4}}">0</span>
+                                    <span class="prefix">{{indicators.symbol4}}</span>			    	
+                                </div>
+                                <span class="title">{{indicators.title4}}</span>	
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Counter Section End -->

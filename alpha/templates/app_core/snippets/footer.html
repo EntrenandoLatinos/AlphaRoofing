@@ -1,0 +1,91 @@
+{% load static %}
+
+<!-- Footer Start -->
+<footer id="rs-footer" class="rs-footer footer-main-home footer-style3">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 pr-20 md-pr-15 md-mb-20 counter_custom">
+                    <div class="footer-logo mb-51 md-mb-30">
+                        <a href="index.html"><img src="{% static 'app_core/assets/images/logo2.webp' %}" alt="" style="width: 70%; height: 70%;"></a>
+                    </div>
+                    <div class="textwidget">
+                        <!-- <p class="pb-20">Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor
+                            in cididunt ut labore.</p>
+                        <p class="pb-25"><strong>Opening Hours</strong> : Monday – Sat: 9am to 6pm</p> -->
+                    </div>
+                    <ul class="footer-social md-mb-30">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 md-mb-10">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="address-widget">
+                        <li>
+                            <i class="fi fi-rr-map-marker-home"></i>
+                            <div class="desc">
+                                {{contact.location}}
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fi fi-rr-phone-call"></i>
+                            <div class="desc">
+                                <a href="tel:" id="contactPhone"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fi fi-rr-envelope-plus"></i>
+                            <div class="desc">
+                                <a href="mailto:{{contact.email}}">
+                                    {{contact.email}}
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 md-mb-10">
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul class="site-map">
+                        <li><a href="javascript:;">Roofing</a></li>
+                        <li><a href="javascript:;">Siding</a></li>
+                        <li><a href="javascript:;">Gutter</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <!-- <p class="widget-desc">Tetur adipiscing elit, sed do eiusmod tempor in cididunt ut labore.</p> -->
+                    <p>
+                        <input type="email" name="email" placeholder="Your Email Address" required="">
+                        <input type="submit" value="Subscribe Now">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row y-middle">
+                <div class="col-lg-6 md-mb-10 text-lg-end text-center order-last">
+                    <ul class="copy-right-menu">
+                        <li><a href="{% url 'app_core:index' %}">Home</a></li>
+                        <li><a href="{% url 'app_core:about' %}">About</a></li>
+                        <li><a href="#servicios">Services</a></li>
+                        <li><a href="{% url 'app_core:works' %}">Works</a></li>
+                        <li><a href="{% url 'app_core:faq' %}">FAQ's</a></li>
+                        <li><a href="{% url 'app_core:contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="copyright text-lg-start text-center">
+                        <p>©<script>document.write(new Date().getFullYear())</script> Alpha Roofing All rights reserved</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->

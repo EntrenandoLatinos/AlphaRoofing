@@ -1,0 +1,268 @@
+{% load static %}
+
+<!--Full width header Start-->
+<div class="full-width-header">
+    <!--Header Start-->
+    <header id="rs-header" class="rs-header header-style1 header-blue-modify2">
+
+        <!-- Toolbar Area Start -->
+        <div class="toolbar-area topbar-style1 topber-modify3 hidden-md">
+            <div class="container">
+                <div class="row rs-vertical-middle">
+                    <div class="col-lg-6">
+                        <div class="toolbar-contact">
+                            <ul class="rs-contact-info">
+                                <li> Welcome To Alpha Roofing Company </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="toolbar-sl-share">
+                            <ul class="clearfix">
+                                <li class="opening"> 
+                                    <em><i class="fi fi-rr-time-add"></i> Hours: Mon-Fri: 7.00 am - 7.00 pm</em> 
+                                </li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Toolbar Area End -->
+
+        <!-- Middle Header Area End -->
+        <div class="middle-header middle-modify1 hidden-md">
+            <div class="container">
+                <div class="row-table">
+                    <div class="col-cell header-logo">
+                        <div class="logo-part">
+                            <a href="{% url 'app_core:index' %}"><img src="{% static 'app_core/assets/images/logo3.webp' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-cell">
+                        <div class="rs-contact-info">
+                            <div class="contact-part">
+                                <div class="info-icon">
+                                    <i class="fi fi-rr-map-marker-home"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="info-title">
+                                        Contact us
+                                    </div>
+                                    <div class="info-des">
+                                        {{contact.location}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-part">
+                                <div class="info-icon">
+                                    <i class="fi fi-rr-envelope-plus"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="info-title">
+                                        Email us
+                                    </div>
+                                    <div class="info-des">
+                                        <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-part margin-no">
+                                <div class="info-icon">
+                                    <i class="fi fi-rr-phone-call"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="info-title">
+                                        Free Call
+                                    </div>
+                                    <div class="info-des">
+                                        <a href="tel:" id="contactPhone"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Middle Header Area End -->
+
+        <!-- Menu Start -->
+        <div class="menu-area menu-sticky">
+            <div class="container box-layout">
+                <div class="row-table">
+                    <div class="col-cell header-logo">
+                        <div class="logo-area">
+                            <a href="{% url 'app_core:index' %}">
+                                <img class="normal-logo" src="{% static 'app_core/assets/images/logo3.webp' %}"
+                                    alt="logo" style="max-height: 54px;">
+                                <img class="sticky-logo" src="{% static 'app_core/assets/images/logo3.webp' %}"
+                                    alt="logo" style="max-height: 54px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-cell">
+                        <div class="rs-menu-area">
+                            <div class="main-menu">
+                                <nav class="rs-menu hidden-md">
+                                    <ul class="nav-menu">
+                                        <li>
+                                            <a href="{% url 'app_core:index' %}">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'app_core:about' %}">About</a>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="javascript:;">Services</a>
+                                            <ul class="sub-menu">
+                                                {% for servicio in servicios %}
+                                                    <li><a href="{% url 'app_core:services_view' servicio.id %}">{{servicio.title}}</a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'app_core:works' %}">Works</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'app_core:faq' %}">FAQ's</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'app_core:contact' %}">Contact</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'app_core:privacy' %}">Privacy</a>
+                                        </li>
+                                    </ul> <!-- //.nav-menu -->
+                                </nav>
+                            </div> <!-- //.main-menu -->
+                        </div>
+                    </div>
+                    <div class="col-cell">
+                        <div class="expand-btn-inner">
+                            <ul>
+                                <li class="search-parent">
+                                    <a class="hidden-xs rs-search" href="{% url 'account_login' %}">
+                                        <i class="fi fi-rr-user"></i>
+                                    </a>
+                                </li>
+                                <li class="btn-quote"><a class="quote-button" href="{% url 'app_core:contact' %}#formulario_contacto">Get A Quote<i
+                                            class="fi fi-rr-arrow-small-right"></i></a></li>
+                                <li class="humburger">
+                                    <a id="nav-expander" class="nav-expander bar" href="#">
+                                        <div class="bar">
+                                            <span class="dot1"></span>
+                                            <span class="dot2"></span>
+                                            <span class="dot3"></span>
+                                            <span class="dot4"></span>
+                                            <span class="dot5"></span>
+                                            <span class="dot6"></span>
+                                            <span class="dot7"></span>
+                                            <span class="dot8"></span>
+                                            <span class="dot9"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Menu End -->
+
+        <!-- Canvas Mobile Menu start -->
+        <nav class="right_menu_togle mobile-navbar-menu" id="mobile-navbar-menu">
+            <div class="close-btn">
+                <a id="nav-close2" class="nav-close">
+                    <div class="line">
+                        <span class="line1"></span>
+                        <span class="line2"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-cell header-logo">
+                <div class="logo-area">
+                    <a href="{% url 'app_core:index' %}">
+                        
+                        <img class="sticky-logo" src="{% static 'app_core/assets/images/logo3.webp' %}"
+                            alt="logo">
+                    </a>
+                </div>
+            </div>
+            <ul class="nav-menu mt-3">
+                <li>
+                    <a href="{% url 'app_core:index' %}">Home</a>
+                </li>
+                <li>
+                    <a href="{% url 'app_core:about' %}">About</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="javascript:;">Services</a>
+                    <ul class="sub-menu">
+                        {% for servicio in servicios %}
+                            <li><a href="{% url 'app_core:services_view' servicio.id %}">{{servicio.title}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li>
+                    <a href="{% url 'app_core:works' %}">Works</a>
+                </li>
+                <li>
+                    <a href="{% url 'app_core:faq' %}">FAQ's</a>
+                </li>
+                <li>
+                    <a href="{% url 'app_core:contact' %}">Contact</a>
+                </li>
+                <li>
+                    <a href="{% url 'app_core:privacy' %}">Privacy</a>
+                </li>
+                <li>
+                    <a href="{% url 'account_login' %}">
+                        <i class="fi fi-rr-user" style="display: flex;"></i>
+                    </a>
+                </li>
+            </ul> <!-- //.nav-menu -->
+            <!-- //.nav-menu -->
+
+            <!-- //.nav-menu -->
+            <div class="canvas-contact">
+                <div class="address-area">
+                    <!-- <div class="address-list">
+                        <div class="info-icon">
+                            <i class="fi fi-rr-map-marker-home"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4 class="title">Contact</h4>
+                            <em>31 New Street, NY, USA</em>
+                        </div>
+                    </div> -->
+                    <div class="address-list">
+                        <div class="info-icon">
+                            <i class="fi fi-rr-envelope-plus"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4 class="title">Email</h4>
+                            <em><a href="mailto:{{contact.email}}">{{contact.email}}</a></em>
+                        </div>
+                    </div>
+                    <div class="address-list">
+                        <div class="info-icon">
+                            <i class="fi fi-rr-phone-call"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4 class="title">Free Call</h4>
+                            <em><a href="tel:" id="contactPhone"></a></em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Canvas Menu end -->
+    </header>
+    <!--Header End-->
+</div>
+<!--Full width header End-->

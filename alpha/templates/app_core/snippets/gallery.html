@@ -1,0 +1,25 @@
+{% load static %}
+
+<!-- Gallery Start -->
+<div class="rs-gallery gallery-style1 pt-120 pb-120 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="sec-title text-center mb-45">
+            <span class="sub-text sub-text5">Portafolio</span>
+            <h2 class="title">
+                Our Works
+            </h2>
+        </div>
+        <div class="row">
+            {% for gallery in works %}
+                <div class="col-lg-4 col-md-6 mb-30">
+                    <div class="gallery-item">
+                        <div class="gallery-icon">
+                            <a class="image-popup" href="{{gallery.image.url}}"><img src="{{gallery.image.url}}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Gallery End -->

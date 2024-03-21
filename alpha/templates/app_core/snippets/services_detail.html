@@ -1,0 +1,81 @@
+{% load static %}
+
+<!-- Project Details Section Start -->
+<div class="rs-project-details pt-70 md-pt-80">
+    <div class="container">
+        <div class="sec-title text-center mb-45">
+            <span class="sub-text sub-text5">Service</span>
+            <h2 class="title">
+                {{servicio.title}}
+            </h2>
+        </div>
+        <div class="blog-img pb-60 container_custom_project gallery-icon">
+            <a href="{{servicio.image.url}}" class="image-popup"><img src="{{servicio.image.url}}" alt=""></a>
+        </div>
+        <div class="project-txt mb-30">
+            <div class="desc">
+                {{servicio.description|safe}}
+            </div>
+        </div>
+        <div class="project-txt mb-30">
+            <div class="desc">
+                <blockquote>
+                    <p>{{servicio.description_finish}}</p>
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="rs-project-goals">
+
+        {% for subservice in subservicios %}
+            {% if forloop.counter|divisibleby:"2" %}
+            <div class="row y-middle">
+                <div class="col-lg-6 pr-50 md-pr-15">
+                    <div class="project-content">
+                        <div class="project-title">
+                            <h2 class="title pb-35">{{subservice.title}}</h2>
+                        </div>
+                        <div class="desc pb-30 custom_list">
+                            {{subservice.description|safe}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="project-goal gallery-icon">
+                        <a href="{{subservice.image.url}}" class="image-popup">
+                            <img src="{{subservice.image.url}}" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="outcome-project md-pt-50">
+                <div class="row y-middle">
+                    <div class="col-lg-6 md-mb-30">
+                        <div class="rs-videos career-style1 gallery-icon">
+                            <div class="images-video">
+                                <a href="{{subservice.image.url}}" class="image-popup">
+                                    <img src="{{subservice.image.url}}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pl-45 md-pl-15">
+                        <div class="project-content mb-45 md-mb-0">
+                            <div class="project-title">
+                                <h2 class="title pb-35">{{subservice.title}}</h2>
+                            </div>
+                            <div class="desc pb-30 custom_list">
+                                {{subservice.description|safe}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+        <section class="section-1" style="padding: 50px 0px;"></section>
+        </div>
+    </div>
+</div>
+<!-- Project Details Section End -->
