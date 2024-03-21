@@ -131,7 +131,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
-ACCOUNT_EMAIL_SUBJECT_PREFIX = '¡Dvine Roofing! - '
+ACCOUNT_EMAIL_SUBJECT_PREFIX = '¡Alpha Roofing Restoration! - '
 LOGIN_URL = 'account_login'
 LOGIN_REDIRECT_URL = 'app_user:login-redirect'
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
