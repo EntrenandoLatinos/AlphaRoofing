@@ -13,7 +13,7 @@ SOCIAL_MEDIA_CHOICES = [
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = ['location', 'phone1', 'phone2', 'email', 'latitude', 'longitude']
+        fields = ['image', 'location', 'phone1', 'phone2', 'email', 'latitude', 'longitude']
         widgets = {
             'location': forms.TextInput(attrs={'class': 'form-control'}),
             'phone1': forms.TextInput(attrs={'class': 'form-control'}),
@@ -38,7 +38,7 @@ class BannerForm(forms.ModelForm):
 class AboutForm(forms.ModelForm):
     class Meta:
         model = About
-        fields = ['image', 'about', 'mision', 'vision', 'image_google', 'url_google']
+        fields = ['image', 'image2', 'image3', 'about', 'mision', 'vision', 'image_google', 'url_google']
         widgets = {
             'url_google': forms.TextInput(attrs={'class': 'fom-rcontrol', 'type': 'url'}),
         }
