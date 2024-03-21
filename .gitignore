@@ -5,11 +5,11 @@ __pycache__/
 # JetBrains IDE
 .idea/
 
-#App migrations and media folders
-alpha/app_core/migrations/
-alpha/app_user/migrations/
-alpha/media/
-alpha/static/
+# App migrations and media folders
+# alpha/app_core/migrations/
+# alpha/app_user/migrations/
+# alpha/media/
+# alpha/static/
 
 # Archivos de migraciones
 migrations/*
