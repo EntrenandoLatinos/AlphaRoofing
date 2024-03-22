@@ -10,5 +10,4 @@ urlpatterns = [
     path('faq/', general.faq, name='faq'),
     path('contact/', general.contact, name='contact'),
     path('privacy/', general.privacy, name='privacy'),
-    path('mail/', general.mail_view, name='mail'),
 ]
