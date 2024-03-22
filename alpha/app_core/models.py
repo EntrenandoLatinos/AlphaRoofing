@@ -37,6 +37,7 @@ class AuditoriaFecha(models.Model):
         abstract = True
 
 class Contact(AuditoriaFecha):
+    image = models.ImageField(upload_to='banner/', null=True, blank=True)
     location = models.CharField("Location", max_length=300, null=True, blank=True)
     phone1 = models.CharField("Phone 2", max_length=60, null=True, blank=True)
     phone2 = models.CharField("Phone 1", max_length=60, null=True, blank=True)
@@ -70,6 +71,8 @@ class Banner(AuditoriaFecha):
     
 class About(AuditoriaFecha):
     image = models.ImageField(upload_to='about/', null=True, blank=True)
+    image2 = models.ImageField(upload_to='about/', null=True, blank=True)
+    image3 = models.ImageField(upload_to='about/', null=True, blank=True)
     about = RichTextField("About", null=True, blank=True)
     mision = RichTextField("Mission", null=True, blank=True)
     vision = RichTextField("Vision", null=True, blank=True)
