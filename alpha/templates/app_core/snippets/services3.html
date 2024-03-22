@@ -1,0 +1,50 @@
+{% load static %}
+
+<!-- Services Section Start -->
+<div class="rs-services services-main-home gray-bg pt-120 pb-120 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="sec-title text-center mb-45">
+            <span class="sub-text sub-text5">Portafolio</span>
+            <h2 class="title">
+                Our Services
+            </h2>
+        </div>
+        <div class="row">
+        {% for service in servicios %}
+            <div class="col-xl-4 col-md-6 mb-30">
+                <div class="services-item">
+                    <div class="services-wrap">
+                        <div class="services-image custom_service">
+                            <img src="{{service.image.url}}" alt="Services">
+                        </div>
+                        <div class="services-content">
+                            <div class="service-inner">
+                                <div class="icon-top">
+                                    <img src="{{service.icon.url}}" alt="Services">
+                                </div>
+                                <div class="services-titles">
+                                    <h3 class="title"><a href="{% url 'app_core:services_view' service.id %}">{{service.title}}</a></h3>
+                                </div>
+                                
+                                <div class="services-btn">
+                                    <a class="btn-text" href="{% url 'app_core:services_view' service.id %}">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="normarl-text-area">
+                            <div class="services-titles">
+                                <h3 class="title"><a href="{% url 'app_core:services_view' service.id %}">{{service.title}}</a></h3>
+                            </div>
+                            <div class="icon-image">
+                                <img src="{{service.icon.url}}" alt="Services">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+            
+        </div>
+    </div>
+</div>
+<!-- Services Section End -->

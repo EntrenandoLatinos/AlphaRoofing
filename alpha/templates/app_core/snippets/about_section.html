@@ -1,0 +1,77 @@
+{% load static %}
+
+<!-- About Start -->
+<div class="rs-about about-style2 about-modify1 pt-120 pb-120 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-lg-6 md-mb-50">
+                <div class="image-part2">
+                    <img src="{{about.image3.url}}" alt="About">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="sec-title">
+                    <span class="sub-text sub-text9">About Us</span>
+                    <h2 class="title title7 pb-30">
+                        We always think on<br>
+                        your dream
+                    </h2>
+                    <div class="desc desc9 desc-small">
+                        {{about.about|safe}}
+                    </div>
+                    <!-- <p class="desc desc6 pt-30">
+                        Pretium quam vulputate dignissim suspendisse in. Viverra vitae congue eu the consequat ac felis donec et odio egestas.
+                    </p> -->
+                    <!-- Services Start -->
+                    <div class="rs-services services-style19 pt-30 pb-40">
+                        <div class="row">
+                            <div class="col-lg-6 md-mb-30">
+                                <div class="services-item">
+                                    <div class="services-icon">
+                                        <img src="{% static 'app_core/assets/images/about/style5/ser1.png' %}" alt="Images">
+                                    </div>
+                                    <div class="services-text">
+                                        <h4 class="title">Hard Work</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="services-item">
+                                    <div class="services-icon">
+                                        <img src="{% static 'app_core/assets/images/about/style5/ser2.png' %}" alt="Images">
+                                    </div>
+                                    <div class="services-text">
+                                        <h4 class="title">Integrity</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Services End -->
+                    <div class="row y-middle">
+                        <!-- <div class="col-lg-5 col-sm-5 xs-mb-30">
+                            <div class="btn-part">
+                                <a class="readon blue-btn know-more" href="about.html">Know More</a>
+                            </div>
+                        </div> -->
+                        <div class="col-lg-12 col-sm-6 pl-30 md-pl-15">
+                            <div class="rs-addon-services">
+                                <div class="services-icon">
+                                    <i class="fa fa fa-phone"></i>
+                                </div>
+                                <div class="services-text">
+                                    <h4 class="title"> Contact Us!</h4>
+                                    <p class="services-txt">
+                                        <a href="">{{contact.phone1}}</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+

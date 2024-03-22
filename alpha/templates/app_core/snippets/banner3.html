@@ -1,0 +1,85 @@
+{% load static %}
+
+<!-- Banner Start -->
+<div class="rs-banner banner-style2">
+    <div class="banner-background"> <!-- Nuevo contenedor para la imagen de fondo -->
+        <div class="container">
+            <div class="content-wrap">
+                <h1 class="title wow fadeInDown">
+                    {{banner.title}} <br> {{banner.title2}}
+                </h1>
+                <div class="description wow">
+                    <p>
+                    {% if banner.subtitle %}
+                        {{banner.subtitle}}
+                    {% endif %}
+                    </p>  
+                </div>
+                <div class="banner-btn mt-40 wow fadeInUp" style="padding: 90px 0;">
+                    <!-- <a class="readon blue-btn orange-more1" href="contact.html">Discover More<i class="fa fi fi-rr-arrow-right"></i></a> -->
+                    <a class="readon" id="whatsapp_banner_web" style="background-color: #25d366; color: white;" data-aos="zoom-out-up" data-aos-delay="1200" class="ml-auto mr-auto mt-5 btn" target="_blank" href="https://web.whatsapp.com/send?l=es&phone=1{{contact.phone1}}&text=https://dvineroofingllc.com/ " rel="noopener noreferrer">
+                        <i class="whatsapp-icon"></i> Whatsapp 
+                    </a>
+                    <a class="readon" id="whatsapp_banner_movil" style="background-color: #25d366; color: white;" data-aos="zoom-out-up" data-aos-delay="1200" class="ml-auto mr-auto mt-5 btn" target="_blank" href="https://api.whatsapp.com/send?l=es&phone=1{{contact.phone1}}&text=https://dvineroofingllc.com/ " rel="noopener noreferrer">
+                        <i class="whatsapp-icon"></i> Whatsapp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner End -->
+
+<!-- Services Start -->
+<div class="rs-services services-style2 mb-md-0">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-lg-4">
+                <div class="services-box">
+                    <div class="services-icon">
+                        <a href="javascript:;">
+                            <img class="dance_hover" src="{% static 'app_core/assets/images/services/style2/1.png' %}" alt="Images">
+                        </a>
+                    </div>
+                    <div class="services-content">
+                        <h3 class="title"><a href="javascript:;">{{skills.title1}}</a></h3>
+                        <p class="services-txt">  
+                            {{skills.description1}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="services-box services-yellow-box">
+                    <div class="services-icon">
+                        <a href="javascript:;">
+                            <img class="dance_hover" src="{% static 'app_core/assets/images/services/style2/4.png' %}" alt="Images">
+                        </a>
+                    </div>
+                    <div class="services-content">
+                        <h3 class="title"><a href="javascript:;" class="white-color">{{skills.title2}}</a></h3>
+                        <p class="services-txt white-color">  
+                            {{skills.description2}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="services-box">
+                    <div class="services-icon">
+                        <a href="javascript:;">
+                            <img class="dance_hover" src="{% static 'app_core/assets/images/services/style2/3.png' %}" alt="Images">
+                        </a>
+                    </div>
+                    <div class="services-content">
+                        <h3 class="title"><a href="javascript:;">{{skills.title3}}</a></h3>
+                        <p class="services-txt">  
+                            {{skills.description3}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services End -->
