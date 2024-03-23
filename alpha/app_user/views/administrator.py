@@ -280,7 +280,7 @@ def google_business_create(request):
                 # Construir la ruta de la imagen basada en la primera letra del nombre
                 if first_letter and first_letter.isalpha() and first_letter.isascii():
                     image_filename = f'{first_letter}.webp'
-                    image_folder = f'static_in_env/app_core/assets/images/abecedario/'
+                    image_folder = f'static/app_core/assets/images/abecedario/'
                     # Obtén la ruta del archivo de la imagen
                     FILE_PATH = f'{image_folder}{image_filename}'
                     # Abre el archivo localmente
@@ -369,7 +369,7 @@ def google_business_update(request, pk):
                     # Construir la ruta de la imagen basada en la primera letra del nombre
                     if first_letter and first_letter.isalpha() and first_letter.isascii():
                         image_filename = f'{first_letter}.webp'
-                        image_folder = f'static_in_env/app_core/assets/images/abecedario/'
+                        image_folder = f'static/app_core/assets/images/abecedario/'
                         # Obtén la ruta del archivo de la imagen
                         FILE_PATH = f'{image_folder}{image_filename}'
                         # Abre el archivo localmente
@@ -419,7 +419,7 @@ def testimonials_create(request):
             # Construir la ruta de la imagen basada en la primera letra del nombre
             if first_letter and first_letter.isalpha() and first_letter.isascii():
                 image_filename = f'{first_letter}.webp'
-                image_folder = f'static_in_env/app_core/assets/images/abecedario/'
+                image_folder = f'static/app_core/assets/images/abecedario/'
                 # Obtén la ruta del archivo de la imagen
                 FILE_PATH = f'{image_folder}{image_filename}'
                 # Abre el archivo localmente
@@ -457,7 +457,7 @@ def testimonial_update(request, pk):
                 # Construir la ruta de la imagen basada en la primera letra del nombre
                 if first_letter and first_letter.isalpha() and first_letter.isascii():
                     image_filename = f'{first_letter}.webp'
-                    image_folder = f'static_in_env/app_core/assets/images/abecedario/'
+                    image_folder = f'static/app_core/assets/images/abecedario/'
                     # Obtén la ruta del archivo de la imagen
                     FILE_PATH = f'{image_folder}{image_filename}'
                     # Abre el archivo localmente
