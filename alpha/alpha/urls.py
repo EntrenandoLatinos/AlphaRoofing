@@ -17,10 +17,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from app_core.views import general
 
 urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('alpha-manager/', admin.site.urls),
+    path('mail/', general.mail_view, name='mail'),
     path('', include('app_core.urls', namespace='app_core')),
     path('', include('app_user.urls', namespace='app_user')),
 ]
