@@ -6,9 +6,9 @@
         <div class="row y-middle">
             <div class="col-lg-6 md-mb-50">
                 <div class="widget-img">
-                    <img src="{% static 'app_core/assets/images/about/style6/about-6.png' %}" alt="About">
+                    <img src="{{about.image.url}}" alt="About">
                     <div class="multi-img wow fadeinup">
-                        <img src="{% static 'app_core/assets/images/about/style6/shape-1.png' %}" alt="">
+                        <img src="{{about.image2.url}}" alt="">
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                         <div class="col-lg-6 md-mb-30">
                             <div class="services-item">
                                 <div class="services-icon">
-                                    <img src="{{about.image.url}}" alt="Images">
+                                    <img src="{% static 'app_core/assets/images/about/style5/ser1.png' %}" alt="Images">
                                 </div>
                                 <div class="services-text">
                                     <h4 class="title">Hard Work</h4>
@@ -38,7 +38,7 @@
                         <div class="col-lg-6">
                             <div class="services-item">
                                 <div class="services-icon">
-                                    <img src="{{about.image2.url}}" alt="Images">
+                                    <img src="{% static 'app_core/assets/images/about/style5/ser2.png' %}" alt="Images">
                                 </div>
                                 <div class="services-text">
                                     <h4 class="title">Integrity</h4>

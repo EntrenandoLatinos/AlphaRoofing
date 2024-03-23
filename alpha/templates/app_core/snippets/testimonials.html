@@ -14,18 +14,60 @@
             {% for testimonio in testimonials %}
                 <div class="testi-item">
                     <div class="item-content">
+                            <ul class="rating-bx" style="display: flex; justify-content: center;">
+                                {% if testimonio.stars == '1' %}
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                {% elif testimonio.stars == '2' %}
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                {% elif testimonio.stars == '3' %}
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                {% elif testimonio.stars == '4' %}
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                {% elif testimonio.stars == '5' %}
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                {% endif %}
+                            </ul>
                             <span><img src="{% static 'app_core/assets/images/testimonial/style1/quote11.png' %}" alt="Testimonial"></span>
                             <p style="font-size: 15px;">
                                 {{testimonio.description}}
                             </p>
+                            {% if testimonio.url %}
+                                <a href="{{testimonio.url}}" target="_blank" style="display: flex; justify-content: end;">
+                                    <img src="{% static 'app_core/assets/images/gbr.webp' %}" alt="google_business_review" style="max-width: 50%;">
+                                </a>
+                            {% endif %}
                     </div>
                     <div class="testi-content">
                             <div class="image-wrap">
-                                <img src="{% static 'app_user/images/user.png' %}" alt="Testimonial">
+                                {% if testimonio.image %}
+                                    <img src="{{testimonio.image.url}}" alt="Testimonial">
+                                {% else %}
+                                    <img src="{% static 'app_user/images/user.png' %}" alt="Testimonial">
+                                {% endif %}
                             </div>
                             <div class="testi-information">
                                 <div class="testi-name">{{testimonio.name}}</div>
-                                <span class="testi-title">{{testimonio.location}}</span>
+                                <!-- <span class="testi-title">{{testimonio.location}}</span> -->
                             </div>
                     </div>
                 </div>
